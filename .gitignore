@@ -1,0 +1,19 @@
+# dependencies and build output
+node_modules/
+dist/
+
+# local settings and secrets
+.env
+.env.*
+!.env.example
+
+# logs and caches
+*.log
+.vite/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# local tool settings
+.claude/
