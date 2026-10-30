@@ -17,3 +17,6 @@ Thumbs.db
 
 # local tool settings
 .claude/
+
+# Vercel
+.vercel/
