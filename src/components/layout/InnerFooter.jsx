@@ -11,7 +11,7 @@ export default function InnerFooter() {
               <div className="size-8 rounded-lg bg-primary text-on-primary flex items-center justify-center">
                 <BrandMark className="size-4" />
               </div>
-              <span className="font-headline-lg text-lg font-bold text-on-surface">ExpertHelp</span>
+              <span className="font-headline-lg text-lg font-bold text-on-surface">AskAnythingAnswers</span>
             </div>
             <p className="text-xs text-on-surface-variant leading-relaxed">
               {' '}
@@ -111,7 +111,7 @@ export default function InnerFooter() {
           </div>
         </div>
         <div className="pt-8 border-t border-surface-container flex flex-col sm:flex-row items-center justify-between text-xs text-on-surface-variant gap-4">
-          <p>© 2025 ExpertHelp. Dedicated to high-trust human guidance.</p>
+          <p>© 2026 AskAnythingAnswers. Dedicated to high-trust human guidance.</p>
           <div className="flex items-center gap-6">
             <Link className="hover:text-primary" to="/privacy">
               Privacy Policy

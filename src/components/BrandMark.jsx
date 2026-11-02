@@ -1,4 +1,4 @@
-// ExpertHelp logo mark (used in both the header and the footer).
+// AskAnythingAnswers logo mark (used in both the header and the footer).
 export default function BrandMark({ className = '' }) {
   return (
     <svg className={className} fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">

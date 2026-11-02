@@ -10,7 +10,7 @@ export default function Categories() {
             </div>
             <h2 className="font-headline-lg text-3xl sm:text-4xl text-on-surface font-normal">
               {' '}
-              What do you need help with?{' '}
+              What Do You Need Help With?{' '}
             </h2>
           </div>
           <p className="text-sm text-on-surface-variant max-w-md">

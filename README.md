@@ -1,6 +1,6 @@
 # chatbot
 
-ExpertHelp front end built with React (Vite) and Tailwind CSS. It is a static site: no backend or database.
+AskAnythingAnswers front end built with React (Vite) and Tailwind CSS. It is a static site: no backend or database.
 
 Pages: Home (`/`), Printers & Scanners (`/category/printers`), Contact Support (`/contact`),
 Privacy Policy (`/privacy`) and Terms of Service (`/terms`).

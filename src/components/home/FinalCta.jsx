@@ -36,7 +36,7 @@ export default function FinalCta() {
         </div>
         <h2 className="font-headline-lg text-3xl sm:text-4xl text-on-surface font-normal mb-3">
           {' '}
-          Ready to solve your issue right now?{' '}
+          Ready to Solve Your Issue Right Now?{' '}
         </h2>
         <p className="text-sm sm:text-base text-on-surface-variant max-w-xl mx-auto mb-8">
           {' '}

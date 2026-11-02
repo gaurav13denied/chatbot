@@ -11,7 +11,7 @@ export default function HomeFooter() {
               <div className="size-8 rounded-lg bg-primary text-on-primary flex items-center justify-center">
                 <BrandMark className="size-4" />
               </div>
-              <span className="font-headline-lg text-lg font-bold text-on-surface">ExpertHelp</span>
+              <span className="font-headline-lg text-lg font-bold text-on-surface">AskAnythingAnswers</span>
             </div>
             <p className="text-xs text-on-surface-variant leading-relaxed">
               {' '}
@@ -60,26 +60,11 @@ export default function HomeFooter() {
                 </a>
               </li>
               <li>
-                <a className="hover:text-primary transition-colors" href="#specialists">
-                  Meet Our Specialists
-                </a>
-              </li>
-              <li>
-                <a className="hover:text-primary transition-colors" href="#recent-cases">
-                  Recent Cases
-                </a>
-              </li>
-              <li>
                 <a className="hover:text-primary transition-colors" href="#faqs">
                   Frequently Asked Questions
                 </a>
               </li>
-              <li>
-                <Link className="hover:text-primary transition-colors" to="/contact">
-                  Apply as a Specialist
-                </Link>
-              </li>
-            </ul>
+              </ul>
           </div>
           <div>
             <h4 className="text-xs font-bold uppercase tracking-wider text-on-surface mb-3">Help Desk</h4>
@@ -99,16 +84,11 @@ export default function HomeFooter() {
                   Terms of Service
                 </Link>
               </li>
-              <li>
-                <Link className="hover:text-primary transition-colors" to="/terms#art-3">
-                  Community Guidelines
-                </Link>
-              </li>
-            </ul>
+              </ul>
           </div>
         </div>
         <div className="pt-8 border-t border-surface-container flex flex-col sm:flex-row items-center justify-between text-xs text-on-surface-variant gap-4">
-          <p>© 2025 ExpertHelp. All rights reserved.</p>
+          <p>© 2026 AskAnythingAnswers. All rights reserved.</p>
           <div className="flex items-center gap-6">
             <Link className="hover:text-primary" to="/privacy">
               Privacy
@@ -116,10 +96,7 @@ export default function HomeFooter() {
             <Link className="hover:text-primary" to="/terms">
               Terms
             </Link>
-            <Link className="hover:text-primary" to="/contact">
-              Help Center
-            </Link>
-          </div>
+            </div>
         </div>
       </div>
     </footer>

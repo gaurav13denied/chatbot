@@ -29,8 +29,8 @@ export default function HowItWorks() {
             </h3>
             <p className="text-sm text-on-surface-variant leading-relaxed">
               {' '}
-              Describe your problem in your own words in a few seconds. Type what you see, hear, or feel isn't
-              working properly.{' '}
+              Describe your problem in your own words in a few seconds. Type what you see, hear, or feel that
+              isn't working properly.{' '}
             </p>
           </div>
           <div className="bg-surface-container-low rounded-2xl p-8 border border-outline-variant/40 relative">
@@ -70,7 +70,7 @@ export default function HowItWorks() {
             href="#quick-match"
           >
             {' '}
-            Try It Now — Ask Your Question{' '}
+            Try It Now. Ask Your Question{' '}
           </a>
         </div>
       </div>

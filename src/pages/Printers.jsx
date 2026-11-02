@@ -1,6 +1,7 @@
 import Photo from '../components/Photo.jsx';
-import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import useChat from '../lib/useChat.js';
+import ChatPanel from '../components/home/ChatPanel.jsx';
 
 // Starter chips that fill the intake box
 const QUICK_CHIPS = [
@@ -12,22 +13,7 @@ const QUICK_CHIPS = [
 ];
 
 export default function Printers() {
-  const [issue, setIssue] = useState('');
-  const [matchState, setMatchState] = useState('idle'); // idle | matching | connected
-  const issueRef = useRef(null);
-
-  // Tapping a chip fills the box and focuses it
-  function pickChip(text) {
-    setIssue(text + ' - ');
-    issueRef.current?.focus();
-  }
-
-  // Same sequence as the design: matching... then connected (no real connection is made)
-  function startChat() {
-    if (!issue.trim()) setIssue("Printer is showing offline and won't connect to Wi-Fi");
-    setMatchState('matching');
-    setTimeout(() => setMatchState('connected'), 800);
-  }
+  const chat = useChat();
 
   return (
     <div className="flex flex-col w-full">
@@ -90,7 +76,7 @@ export default function Printers() {
               </div>
               <h1 className="font-headline-lg text-headline-lg lg:text-display-lg text-on-surface tracking-tight font-medium mb-5 leading-tight">
                 {' '}
-                Get Instant 1-on-1 Help for Any Printer or Scanner Issue{' '}
+                Get Instant Help for Any Printer or Scanner Issue{' '}
               </h1>
               <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-8 leading-relaxed">
                 {' '}
@@ -152,66 +138,8 @@ export default function Printers() {
                     Live Specialist Ready
                   </span>
                 </div>
-                <p className="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold mb-2.5">
-                  Popular issues (Tap to fill):
-                </p>
-                <div className="flex flex-wrap gap-1.5 mb-5" id="quick-chips">
-                  {QUICK_CHIPS.map((chip) => (
-                    <button
-                      key={chip}
-                      className="quick-chip text-left px-2.5 py-1 rounded-md bg-surface-container text-on-surface font-body-sm text-body-sm hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors"
-                      type="button"
-                      onClick={() => pickChip(chip)}
-                    >
-                      {chip}
-                    </button>
-                  ))}
-                </div>
-                <div className="space-y-4">
-                  <div className="relative">
-                    <label className="sr-only" htmlFor="printer-issue-input">
-                      Describe your printer issue
-                    </label>{' '}
-                    <textarea
-                      className="w-full bg-surface-container-low rounded-xl p-4 text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest transition-all resize-none"
-                      id="printer-issue-input"
-                      placeholder="Describe your printer model or issue (e.g. HP OfficeJet 9015 won't connect to Wi-Fi after router reset)..."
-                      rows="4"
-                      ref={issueRef}
-                      value={issue}
-                      onChange={(e) => setIssue(e.target.value)}
-                    />
-                  </div>
-                  <div className="grid grid-cols-2 gap-2.5" />
-                  <button
-                    className={`w-full py-3.5 px-6 rounded-xl text-on-primary font-headline-sm text-headline-sm font-bold shadow-md transition-all flex items-center justify-center gap-2 group ${
-                      matchState === 'connected' ? 'bg-emerald-600' : 'bg-primary hover:bg-primary-container'
-                    }`}
-                    id="start-chat-btn"
-                    type="button"
-                    onClick={startChat}
-                  >
-                    {matchState === 'idle' && (
-                      <>
-                        <span>Ask a Printer Expert</span>
-                        <span className="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">
-                          arrow_forward
-                        </span>
-                      </>
-                    )}
-                    {matchState === 'matching' && (
-                      <>
-                        <span className="material-symbols-outlined text-[20px] animate-spin">refresh</span>{' '}
-                        Matching with Specialist...
-                      </>
-                    )}
-                    {matchState === 'connected' && (
-                      <>
-                        <span className="material-symbols-outlined text-[20px]">check_circle</span> Connected
-                        to David M.!
-                      </>
-                    )}
-                  </button>
+                <div className="space-y-3">
+                  <ChatPanel chat={chat} chips={QUICK_CHIPS} inputId="printer-issue-input" />
                 </div>
                 <div className="mt-4 pt-4 bg-surface-container-lowest flex flex-col gap-2">
                   <div className="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
@@ -237,8 +165,8 @@ export default function Printers() {
             Common Printer Problems We Clear Every Day
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant">
-            Don't waste hours tearing through confusing manuals. Our specialists know the exact sequence to
-            get things moving.
+            Don't waste hours tearing through confusing manuals. Our specialists know the mechanics to get
+            your device working.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

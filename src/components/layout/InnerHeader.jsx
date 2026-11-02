@@ -20,7 +20,7 @@ export default function InnerHeader({ active }) {
                 <BrandMark className="size-4" />
               </div>
               <span className="text-on-surface font-headline-lg text-xl font-bold tracking-tight">
-                ExpertHelp
+                AskAnythingAnswers
               </span>
             </Link>
             <nav className="hidden lg:flex items-center gap-6">

@@ -1,5 +1,9 @@
 import Photo from '../Photo.jsx';
+import useChat from '../../lib/useChat.js';
+import ChatPanel, { Avatar } from './ChatPanel.jsx';
+
 export default function Hero() {
+  const chat = useChat();
   return (
     <section className="relative overflow-hidden border-b border-surface-container py-4 sm:py-5 lg:py-6">
       <div className="absolute inset-0 z-0">
@@ -57,22 +61,22 @@ export default function Hero() {
                 Minutes
               </h1>
               <p className="text-xs sm:text-sm text-on-surface-variant max-w-lg font-normal leading-snug">
-                Connect 1-on-1 with specialists ready to solve your computer, printer, car, appliance, or
-                phone issue right now. No confusing manuals or endless hold music.
+                Connect with friendly specialists ready to solve your computer, printer, car, appliance, or
+                phone issues right now. No confusing manuals or endless hold music.
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-3.5 text-xs text-on-surface font-semibold pt-0.5">
               <div className="flex items-center gap-1.5">
                 <span className="material-symbols-outlined text-primary text-[18px]">verified</span>
-                <span>100% Real Specialists</span>
+                <span>100% Real Human Specialists</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <span className="material-symbols-outlined text-primary text-[18px]">bolt</span>
-                <span>Avg. match under 90 sec</span>
+                <span>Average match under 90 seconds</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <span className="material-symbols-outlined text-primary text-[18px]">lock</span>
-                <span>Secured Communications</span>
+                <span>Private, one-on-one support</span>
               </div>
             </div>
           </div>
@@ -84,23 +88,18 @@ export default function Hero() {
               <div className="bg-surface-container-low px-4 py-2.5 border-b border-surface-container flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
                   <div className="relative">
-                    <Photo
-                      alt="Duty Specialist David M."
-                      className="size-8 rounded-full object-cover border-2 border-primary"
-                      src="https://lh3.googleusercontent.com/aida/AEtjO1V1P4URgq15Dm3SFnBSbLV9jkmf9Iv1ESsWBoBtJbVDOi8Hm4VEIn4ybK59zBQJCmPlEx7CNIzsJfB-88Yk0v-NkVGienuR-2mu1Acp2NOyp4U7-Gi3kbcfzX8B-nSLphkVrIOMlDt581D-opjI4yHzjulpE_CgGYu7uH5uOdO4rQjqUABJpv3I2oOc2Lamnov2mR1ceNf9LtklsQvT7mFcx_m6wvPDghnNDTUqPqG8"
-                      local="/images/david-m.jpg"
-                    />
+                    <Avatar name={chat.persona} className="size-8 text-xs border-2 border-primary" />
                     <span className="absolute bottom-0 right-0 size-2.5 rounded-full bg-emerald-500 border-2 border-white animate-pulse" />
                   </div>
                   <div>
                     <div className="flex items-center gap-1.5">
-                      <h4 className="text-xs font-bold text-on-surface">David M.</h4>
+                      <h4 className="text-xs font-bold text-on-surface">{chat.persona || "Support Specialist"}</h4>
                       <span className="px-1.5 py-0.2 rounded-full bg-primary-fixed text-on-primary-fixed text-[10px] font-bold">
                         On Duty
                       </span>
                     </div>
                     <p className="text-[11px] text-on-surface-variant flex items-center gap-1">
-                      <span className="size-1.5 rounded-full bg-emerald-500" /> Live Help Desk • Ready now
+                      <span className="size-1.5 rounded-full bg-emerald-500" /> Live Help Desk • Ready to respond
                     </p>
                   </div>
                 </div>
@@ -118,78 +117,26 @@ export default function Hero() {
                     star
                   </span>
                   <span className="font-bold text-on-surface text-xs">4.9/5</span>
-                  <span className="text-on-surface-variant text-[11px]">(14,200+ ratings)</span>
+                  <span className="text-on-surface-variant text-[11px]">(14,200+ verified ratings)</span>
                 </div>
                 <span className="text-primary font-bold text-[11px] flex items-center gap-1">
                   <span className="material-symbols-outlined text-[13px]">check_circle</span> 100% Real People
                 </span>
               </div>
               <div className="p-3.5 sm:p-4 space-y-2.5">
-                <div className="flex items-start gap-2">
-                  <Photo
-                    alt="David M."
-                    className="size-6 rounded-full object-cover mt-0.5 shrink-0"
-                    src="https://lh3.googleusercontent.com/aida/AEtjO1V1P4URgq15Dm3SFnBSbLV9jkmf9Iv1ESsWBoBtJbVDOi8Hm4VEIn4ybK59zBQJCmPlEx7CNIzsJfB-88Yk0v-NkVGienuR-2mu1Acp2NOyp4U7-Gi3kbcfzX8B-nSLphkVrIOMlDt581D-opjI4yHzjulpE_CgGYu7uH5uOdO4rQjqUABJpv3I2oOc2Lamnov2mR1ceNf9LtklsQvT7mFcx_m6wvPDghnNDTUqPqG8"
-                    local="/images/david-m.jpg"
-                  />
-                  <div className="bg-surface-container rounded-xl rounded-tl-sm px-3 py-1.5 text-xs text-on-surface leading-snug">
-                    <p>
-                      Hello! I am online right now. Tell me what is happening with your device or select an
-                      issue below.
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  <p className="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant mb-1">
-                    Common starter issues
-                  </p>
-                  <div className="flex flex-wrap gap-1.5">
-                    <span className="px-2 py-0.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-[11px] font-medium text-on-surface border border-outline-variant/30 cursor-pointer transition-colors">
-                      Printer offline
-                    </span>
-                    <span className="px-2 py-0.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-[11px] font-medium text-on-surface border border-outline-variant/30 cursor-pointer transition-colors">
-                      Paper jam
-                    </span>
-                    <span className="px-2 py-0.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-[11px] font-medium text-on-surface border border-outline-variant/30 cursor-pointer transition-colors">
-                      Wi-Fi setup
-                    </span>
-                    <span className="px-2 py-0.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-[11px] font-medium text-on-surface border border-outline-variant/30 cursor-pointer transition-colors">
-                      Blue screen freeze
-                    </span>
-                  </div>
-                </div>
-                <form className="space-y-2" onSubmit={(e) => e.preventDefault()}>
-                  <div className="relative">
-                    <label className="block text-[11px] font-bold text-on-surface mb-1">
-                      Describe your device or issue
-                    </label>
-                    <div className="relative">
-                      <textarea
-                        className="w-full p-2.5 bg-surface-container-low rounded-lg text-on-surface placeholder:text-outline border border-outline-variant/40 focus:ring-2 focus:ring-primary text-xs resize-none focus:outline-none transition-all"
-                        placeholder="Type your question here (e.g. My HP printer won't connect after Wi-Fi change)..."
-                        rows="2"
-                      />
-                    </div>
-                  </div>
-                  <button
-                    className="w-full inline-flex items-center justify-center px-4 py-2.5 bg-primary hover:bg-primary-container text-on-primary font-bold text-sm rounded-lg shadow-sm transition-all gap-1.5"
-                    type="submit"
-                  >
-                    Ask an Expert <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
-                  </button>
-                </form>
+                <ChatPanel chat={chat} />
                 <div className="pt-1.5 border-t border-surface-container flex flex-wrap items-center justify-between text-[10px] text-on-surface-variant gap-1.5">
                   <span className="flex items-center gap-1">
-                    <span className="material-symbols-outlined text-primary text-[13px]">lock</span> Private
-                    Chat
+                    <span className="material-symbols-outlined text-primary text-[13px]">lock</span> Private &
+                    Secure Chat
                   </span>
                   <span className="flex items-center gap-1">
                     <span className="material-symbols-outlined text-primary text-[13px]">verified_user</span>{' '}
-                    Verified Humans
+                    Verified Human Specialists
                   </span>
                   <span className="flex items-center gap-1">
                     <span className="material-symbols-outlined text-primary text-[13px]">chat_bubble</span>{' '}
-                    Free to describe
+                    Free of Cost Answers
                   </span>
                 </div>
               </div>

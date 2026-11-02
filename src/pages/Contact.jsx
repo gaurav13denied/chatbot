@@ -78,7 +78,7 @@ export default function Contact() {
               <div className="flex items-center gap-1.5">
                 <span className="material-symbols-outlined text-[18px] text-primary">schedule</span>
                 <span>
-                  Average queue time: <strong className="text-on-surface">54 seconds</strong>
+                  Average Queue Time: <strong className="text-on-surface">54 seconds</strong>
                 </span>
               </div>
             </div>
@@ -100,7 +100,7 @@ export default function Contact() {
               </div>
               <p className="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
                 {' '}
-                Instant 1-on-1 connection with a specialist in under 90 seconds for immediate device and tech
+                Instant private connection with a specialist in under 90 seconds for immediate device and tech
                 troubleshooting.{' '}
               </p>
             </div>
@@ -185,7 +185,7 @@ export default function Contact() {
               </h2>
               <p className="font-body-sm text-body-sm text-on-surface-variant mt-1.5">
                 {' '}
-                Fill out the details below and an on-duty specialist or customer liaison will get back to you
+                Fill out the details below and an on-duty specialist or customer experts will get back to you
                 promptly.{' '}
               </p>
             </div>
@@ -304,7 +304,6 @@ export default function Contact() {
                       {' '}
                       Your Message <span className="text-error">*</span>
                     </label>
-                    <span className="text-outline text-xs font-label-md">Plain text friendly</span>
                   </div>
                   <textarea
                     className="w-full bg-surface-container-low text-on-surface placeholder:text-outline rounded-lg p-4 text-body-md font-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all resize-y shadow-sm"
@@ -382,7 +381,7 @@ export default function Contact() {
               </div>
               <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
                 {' '}
-                Our network of vetted technical, device, and home specialists operates across all timezones to
+                Our network of vetted technical, device, and home specialists operates across all time zones to
                 guarantee you never get stuck.{' '}
               </p>
               <div className="bg-surface-container-low rounded-lg p-3 text-xs flex items-center justify-between text-on-surface font-medium">
@@ -402,18 +401,18 @@ export default function Contact() {
                     Direct Email
                   </span>
                   <h4 className="font-headline-sm text-headline-sm text-on-surface select-all">
-                    support@experthelp.com
+                    support@askanythinganswers.com
                   </h4>
                 </div>
               </div>
               <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
                 {' '}
-                Prefer email clients? Write directly to our triage desk. Please include photos or screenshots
+                Prefer email clients? Write directly to our management desk. Please include photos or screenshots
                 if applicable.{' '}
               </p>
               <a
                 className="w-full inline-flex items-center justify-center gap-2 rounded-lg py-2.5 px-4 bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-colors"
-                href="mailto:support@experthelp.com"
+                href="mailto:support@askanythinganswers.com"
               >
                 <span className="material-symbols-outlined text-[16px]">outgoing_mail</span>
                 <span>Open in Mail Client</span>
@@ -489,7 +488,7 @@ export default function Contact() {
               </h3>
               <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
                 {' '}
-                When you contact ExpertHelp, you aren’t routed through automated dead-ends. Our dispatch
+                When you contact AskAnythingAnswers, you aren’t routed through automated dead-ends. Our dispatch
                 coordinators are hands-on engineers and technology veterans who review every pairing
                 personally when nuanced help is needed.{' '}
               </p>
