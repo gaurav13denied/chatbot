@@ -396,11 +396,11 @@ export default function Contact() {
                 <div className="size-10 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
                   <span className="material-symbols-outlined text-[22px]">mail</span>
                 </div>
-                <div>
+                <div className="min-w-0">
                   <span className="font-label-sm text-label-sm uppercase tracking-wider text-outline">
                     Direct Email
                   </span>
-                  <h4 className="font-headline-sm text-headline-sm text-on-surface select-all">
+                  <h4 className="font-headline-sm text-base sm:text-[1.05rem] text-on-surface select-all [overflow-wrap:anywhere]">
                     support@askanythinganswers.com
                   </h4>
                 </div>
