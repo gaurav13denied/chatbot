@@ -89,14 +89,6 @@ export default function HomeFooter() {
         </div>
         <div className="pt-8 border-t border-surface-container flex flex-col sm:flex-row items-center justify-between text-xs text-on-surface-variant gap-4">
           <p>© 2026 AskAnythingAnswers. All rights reserved.</p>
-          <div className="flex items-center gap-6">
-            <Link className="hover:text-primary" to="/privacy">
-              Privacy
-            </Link>
-            <Link className="hover:text-primary" to="/terms">
-              Terms
-            </Link>
-            </div>
         </div>
       </div>
     </footer>

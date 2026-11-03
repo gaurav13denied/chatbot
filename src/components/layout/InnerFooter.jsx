@@ -102,27 +102,11 @@ export default function InnerFooter() {
                   Terms of Service
                 </Link>
               </li>
-              <li>
-                <Link className="hover:text-primary transition-colors" to="/contact">
-                  Customer Help Desk
-                </Link>
-              </li>
             </ul>
           </div>
         </div>
         <div className="pt-8 border-t border-surface-container flex flex-col sm:flex-row items-center justify-between text-xs text-on-surface-variant gap-4">
           <p>© 2026 AskAnythingAnswers. Dedicated to high-trust human guidance.</p>
-          <div className="flex items-center gap-6">
-            <Link className="hover:text-primary" to="/privacy">
-              Privacy Policy
-            </Link>
-            <Link className="hover:text-primary" to="/terms">
-              Terms of Service
-            </Link>
-            <Link className="hover:text-primary" to="/contact">
-              Contact Support
-            </Link>
-          </div>
         </div>
       </div>
     </footer>
