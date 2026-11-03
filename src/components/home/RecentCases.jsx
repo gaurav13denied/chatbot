@@ -39,8 +39,7 @@ export default function RecentCases() {
               <div className="flex items-center gap-3">
                 <Photo
                   alt="David M."
-                  className="size-10 rounded-full object-cover border border-outline-variant"
-                  src="https://lh3.googleusercontent.com/aida/AEtjO1V1P4URgq15Dm3SFnBSbLV9jkmf9Iv1ESsWBoBtJbVDOi8Hm4VEIn4ybK59zBQJCmPlEx7CNIzsJfB-88Yk0v-NkVGienuR-2mu1Acp2NOyp4U7-Gi3kbcfzX8B-nSLphkVrIOMlDt581D-opjI4yHzjulpE_CgGYu7uH5uOdO4rQjqUABJpv3I2oOc2Lamnov2mR1ceNf9LtklsQvT7mFcx_m6wvPDghnNDTUqPqG8"
+                  className="size-10 rounded-full object-cover border border-outline-variant"
                   local="/images/david-m.jpg"
                 />
                 <div>
@@ -71,8 +70,7 @@ export default function RecentCases() {
               <div className="flex items-center gap-3">
                 <Photo
                   alt="Elena R."
-                  className="size-10 rounded-full object-cover border border-outline-variant"
-                  src="https://lh3.googleusercontent.com/aida/AEtjO1WF_LJYUT1A2C7gAfcECyAUy-jfWi69r1yXecQTlSWk1-Z2uUfqrWj3n-gQ8cgAPpQ5RTv023To1WyR8ec7Ofx06K9bFHlxpgOyckS4_4mbeA0UomjxrAjIZ5qPfcGbrNTAuV_qiQHym8_VhuV2kjm3KWwzLrHla2jkItxjbBHrWPXBIzg0hiPCwINsBr-DB2cGZ_AKpUc1QOkYyMzHrBkk4NaIFG-reqQO1SvevzKO"
+                  className="size-10 rounded-full object-cover border border-outline-variant"
                   local="/images/elena-r.jpg"
                 />
                 <div>
@@ -103,8 +101,7 @@ export default function RecentCases() {
               <div className="flex items-center gap-3">
                 <Photo
                   alt="Maria R."
-                  className="size-10 rounded-full object-cover border border-outline-variant"
-                  src="https://lh3.googleusercontent.com/aida/AEtjO1UHylAvxjQkVDQkTjjGa3d_bSW3dCKX0iS_HXC6-ANqs4XlsODJNBHez6J0QRxRyBOxXNeI0gZHAkzyP1HD5XT-bBzrOD_yPBZX7Q8Ce5bmx-vPrke-aiqzU2Nr-F9aGEKxL6FyU1cmvbB1qXmPtQ5QwrQXWTi4qiNl8Ilw07e4n_GMCvQgaDRdHPPFoPMe1q-CIHEKTbYzwoanQmX4-GuocFMSiIWMjIdJRbFv8LHq"
+                  className="size-10 rounded-full object-cover border border-outline-variant"
                   local="/images/maria-r.jpg"
                 />
                 <div>
@@ -135,8 +132,7 @@ export default function RecentCases() {
               <div className="flex items-center gap-3">
                 <Photo
                   alt="Marcus B."
-                  className="size-10 rounded-full object-cover border border-outline-variant"
-                  src="https://lh3.googleusercontent.com/aida/AEtjO1U2E9OQ8DM79ENrsTCZJjF-cVmaqVJvRb3JQmtpm4ZsF6WwQbUSqjMLC3vXIbDnrI_ZwBL8z4qTqq9xZbbKQqIGMDMqUUhOcXBEUbP55sMs6R5mZauXdxuOens9nOiDqHRiS6_VFNxy7dqogTmJhkHSxEuym5aCsWiFj1w6R0BAO3tEOFHWcg1mTBLVAmK3amyno-wC0u0TFYlaMPpf9AbaJkYw9or759J9U80mAgoi"
+                  className="size-10 rounded-full object-cover border border-outline-variant"
                   local="/images/marcus-b.jpg"
                 />
                 <div>

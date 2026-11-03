@@ -8,10 +8,9 @@ export default function Hero() {
     <section className="relative overflow-hidden border-b border-surface-container py-4 sm:py-5 lg:py-6">
       <div className="absolute inset-0 z-0">
         <Photo
-          alt="Warm study tech workspace hero background"
-          className="w-full h-full object-cover object-left md:object-center"
-          src="https://lh3.googleusercontent.com/aida/AEtjO1X2Z_sIzrGNEiS_IgwOG88Y_3mGejqMpezX9DvJjmDwFykkI0pS5mWUc8MhjzxWBcMhtfIYQaFxmNPvTmv4W_fUEwCID1yZbcW-1s0_-kZKU8p7JQ_6qQ40Kft9lenqP6VjmopEEzoliJddmWEVd6lC4Dct28dFofq9XGoibnSwQc5HkgG39J6VDUZx4Ep5ze9FIhnvmSco6j-KM6YAG9BaqJxkO5dusChYZMQOkfSR"
-          local="/images/hero.svg"
+          alt="Bright, sunlit workspace with a laptop"
+          className="w-full h-full object-cover object-left md:object-center"
+          local="/images/hero.jpg"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-surface-container-lowest/95 via-surface-container-lowest/90 to-surface-container-lowest/75 lg:from-surface-container-lowest/95 lg:via-surface-container-lowest/80 lg:to-surface-container-lowest/40 backdrop-blur-[1px]" />
       </div>

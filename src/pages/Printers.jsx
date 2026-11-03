@@ -37,12 +37,17 @@ export default function Printers({ media }) {
             ) : (
               <img
                 className="absolute inset-0 -z-20 size-full object-cover"
-                src="/media/printer-cartridges.jpg"
+                src="/media/printer-kitchen.jpg"
                 alt=""
                 aria-hidden="true"
               />
             )}
-            <div className="absolute inset-0 -z-10 bg-gradient-to-r from-surface via-surface/90 to-surface/55" aria-hidden="true" />
+            <div
+              className={`absolute inset-0 -z-10 bg-gradient-to-r ${
+                media === 'image' ? 'from-surface/95 via-surface/75 to-surface/25' : 'from-surface via-surface/90 to-surface/55'
+              }`}
+              aria-hidden="true"
+            />
             <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-surface to-transparent" aria-hidden="true" />
           </>
         )}
@@ -116,7 +121,6 @@ export default function Printers({ media }) {
                   <Photo
                     alt="David M. Specialist"
                     className="size-12 rounded-full object-cover shadow-sm"
-                    src="https://lh3.googleusercontent.com/aida/AEtjO1V1P4URgq15Dm3SFnBSbLV9jkmf9Iv1ESsWBoBtJbVDOi8Hm4VEIn4ybK59zBQJCmPlEx7CNIzsJfB-88Yk0v-NkVGienuR-2mu1Acp2NOyp4U7-Gi3kbcfzX8B-nSLphkVrIOMlDt581D-opjI4yHzjulpE_CgGYu7uH5uOdO4rQjqUABJpv3I2oOc2Lamnov2mR1ceNf9LtklsQvT7mFcx_m6wvPDghnNDTUqPqG8"
                     local="/images/david-m.jpg"
                   />
                   <span className="absolute bottom-0 right-0 size-3 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest" />
@@ -337,7 +341,6 @@ export default function Printers({ media }) {
                     <Photo
                       alt="David M."
                       className="size-16 rounded-xl object-cover shadow-sm"
-                      src="https://lh3.googleusercontent.com/aida/AEtjO1V1P4URgq15Dm3SFnBSbLV9jkmf9Iv1ESsWBoBtJbVDOi8Hm4VEIn4ybK59zBQJCmPlEx7CNIzsJfB-88Yk0v-NkVGienuR-2mu1Acp2NOyp4U7-Gi3kbcfzX8B-nSLphkVrIOMlDt581D-opjI4yHzjulpE_CgGYu7uH5uOdO4rQjqUABJpv3I2oOc2Lamnov2mR1ceNf9LtklsQvT7mFcx_m6wvPDghnNDTUqPqG8"
                       local="/images/david-m.jpg"
                     />{' '}
                     <span className="absolute -bottom-1 -right-1 size-3.5 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest" />
@@ -389,7 +392,6 @@ export default function Printers({ media }) {
                     <Photo
                       alt="Elena R."
                       className="size-16 rounded-xl object-cover shadow-sm"
-                      src="https://lh3.googleusercontent.com/aida/AEtjO1WF_LJYUT1A2C7gAfcECyAUy-jfWi69r1yXecQTlSWk1-Z2uUfqrWj3n-gQ8cgAPpQ5RTv023To1WyR8ec7Ofx06K9bFHlxpgOyckS4_4mbeA0UomjxrAjIZ5qPfcGbrNTAuV_qiQHym8_VhuV2kjm3KWwzLrHla2jkItxjbBHrWPXBIzg0hiPCwINsBr-DB2cGZ_AKpUc1QOkYyMzHrBkk4NaIFG-reqQO1SvevzKO"
                       local="/images/elena-r.jpg"
                     />{' '}
                     <span className="absolute -bottom-1 -right-1 size-3.5 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest" />
@@ -439,7 +441,6 @@ export default function Printers({ media }) {
                     <Photo
                       alt="Marcus B."
                       className="size-16 rounded-xl object-cover shadow-sm"
-                      src="https://lh3.googleusercontent.com/aida/AEtjO1U2E9OQ8DM79ENrsTCZJjF-cVmaqVJvRb3JQmtpm4ZsF6WwQbUSqjMLC3vXIbDnrI_ZwBL8z4qTqq9xZbbKQqIGMDMqUUhOcXBEUbP55sMs6R5mZauXdxuOens9nOiDqHRiS6_VFNxy7dqogTmJhkHSxEuym5aCsWiFj1w6R0BAO3tEOFHWcg1mTBLVAmK3amyno-wC0u0TFYlaMPpf9AbaJkYw9or759J9U80mAgoi"
                       local="/images/marcus-b.jpg"
                     />{' '}
                     <span className="absolute -bottom-1 -right-1 size-3.5 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest" />
@@ -524,7 +525,6 @@ export default function Printers({ media }) {
                 <Photo
                   alt="David M."
                   className="size-7 rounded-full object-cover"
-                  src="https://lh3.googleusercontent.com/aida/AEtjO1V1P4URgq15Dm3SFnBSbLV9jkmf9Iv1ESsWBoBtJbVDOi8Hm4VEIn4ybK59zBQJCmPlEx7CNIzsJfB-88Yk0v-NkVGienuR-2mu1Acp2NOyp4U7-Gi3kbcfzX8B-nSLphkVrIOMlDt581D-opjI4yHzjulpE_CgGYu7uH5uOdO4rQjqUABJpv3I2oOc2Lamnov2mR1ceNf9LtklsQvT7mFcx_m6wvPDghnNDTUqPqG8"
                   local="/images/david-m.jpg"
                 />
                 <span className="font-body-sm text-body-sm font-semibold text-on-surface">
@@ -557,7 +557,6 @@ export default function Printers({ media }) {
                 <Photo
                   alt="Elena R."
                   className="size-7 rounded-full object-cover"
-                  src="https://lh3.googleusercontent.com/aida/AEtjO1WF_LJYUT1A2C7gAfcECyAUy-jfWi69r1yXecQTlSWk1-Z2uUfqrWj3n-gQ8cgAPpQ5RTv023To1WyR8ec7Ofx06K9bFHlxpgOyckS4_4mbeA0UomjxrAjIZ5qPfcGbrNTAuV_qiQHym8_VhuV2kjm3KWwzLrHla2jkItxjbBHrWPXBIzg0hiPCwINsBr-DB2cGZ_AKpUc1QOkYyMzHrBkk4NaIFG-reqQO1SvevzKO"
                   local="/images/elena-r.jpg"
                 />
                 <span className="font-body-sm text-body-sm font-semibold text-on-surface">
@@ -590,7 +589,6 @@ export default function Printers({ media }) {
                 <Photo
                   alt="David M."
                   className="size-7 rounded-full object-cover"
-                  src="https://lh3.googleusercontent.com/aida/AEtjO1V1P4URgq15Dm3SFnBSbLV9jkmf9Iv1ESsWBoBtJbVDOi8Hm4VEIn4ybK59zBQJCmPlEx7CNIzsJfB-88Yk0v-NkVGienuR-2mu1Acp2NOyp4U7-Gi3kbcfzX8B-nSLphkVrIOMlDt581D-opjI4yHzjulpE_CgGYu7uH5uOdO4rQjqUABJpv3I2oOc2Lamnov2mR1ceNf9LtklsQvT7mFcx_m6wvPDghnNDTUqPqG8"
                   local="/images/david-m.jpg"
                 />
                 <span className="font-body-sm text-body-sm font-semibold text-on-surface">

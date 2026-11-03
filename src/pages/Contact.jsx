@@ -463,7 +463,8 @@ export default function Contact() {
               <div className="pt-2 flex items-center gap-3">
                 <img
                   className="size-10 rounded-full object-cover shadow-sm ring-2 ring-primary-fixed"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcQ2fyZJo_ASl9eskgW1_3bC7tUoOXqwvyvWxS_kdN9CW7c7iEbaF8vgU_0_6K06w4t1rV55H1T7NxaZhoYbnrFBOBgCc00RDUru_HfB_e_BXtTCfRnsV8iz_riVjTjEYkX0XdETYNLlovR4PtpdFxRIDVl3jcQcUQ0jNwHHuRu_XwgH5ofoaB_9ngzUJ4MS91fLCAxor7YJe39IzJfVtXNe3V61buewR3N1K8lYY"
+                  src="/images/contact-safety-desk.jpg"
+                  alt="Quality & Safety Desk specialist"
                 />
                 <div>
                   <p className="font-label-md text-label-md text-white font-semibold">
@@ -514,7 +515,8 @@ export default function Contact() {
             <div className="md:col-span-5 relative">
               <img
                 className="rounded-xl shadow-lg object-cover w-full h-72"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuDm8JwZLzWQB5g56TfQvW7dhy95bDuwVeqqDqVn5Waxpy8CS-209jWlpgLNWSLQ7Xf8DJnFvvFm-bGSwCj-iC99wnOhj1-b7wd51VngA3XNDZiTJNnBXaLkOGEkePxFjSExzNLGm7JQos3zDc5xJBv96PUbezIcKC4z9h9o54iZaU-MG2A067hXJSOklyzMd9_Mkv4WnoBj8QciKVN6R5a05CGExH7G6jBxBST5A"
+                src="/images/contact-help-desk.jpg"
+                alt="Help desk specialist wearing a headset"
               />
               <div className="absolute -bottom-4 -left-4 bg-surface-container-lowest p-3 rounded-lg shadow-md flex items-center gap-3">
                 <span className="material-symbols-outlined text-primary text-[24px]">verified</span>

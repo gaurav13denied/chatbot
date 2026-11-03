@@ -1,14 +1,13 @@
-Images used when the photo links from the design (Stitch) do not load.
+Photos used by the site (all loaded from this folder):
 
-Each image on the site tries the original Stitch link first, then the file in this folder.
+  hero.jpg               home page hero background
+  david-m.jpg            David M.   - Printer & Computer Specialist
+  elena-r.jpg            Elena R.   - Mac & Windows System Expert
+  maria-r.jpg            Maria R.   - Car & Vehicle Specialist
+  sarah-c.jpg            Sarah C.   - Smart Home & Devices Specialist
+  robert-m.jpg           Robert M.  - Home Electrical & Appliance Expert
+  marcus-b.jpg           Marcus B.  - Wi-Fi & Internet Expert
+  contact-help-desk.jpg  contact page, "Behind Our Help Desk"
+  contact-safety-desk.jpg contact page, Quality & Safety Desk avatar
 
-  hero.svg       hero background on the home page (drawn stand-in, not a photo)
-  david-m.jpg    David M.   (stand-in portrait from randomuser.me)
-  elena-r.jpg    Elena R.   (stand-in portrait)
-  maria-r.jpg    Maria R.   (stand-in portrait)
-  sarah-c.jpg    Sarah C.   (stand-in portrait)
-  robert-m.jpg   Robert M.  (stand-in portrait)
-  marcus-b.jpg   Marcus B.  (stand-in portrait)
-
-To use your own photos, replace these files and keep the same file names
-(for the hero you can also change the path in src/components/home/Hero.jsx, e.g. to hero.jpg).
+Source: the stitch_conversational_expert_discovery_platform folder (resized to JPEG).
