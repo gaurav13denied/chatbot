@@ -14,10 +14,10 @@ export default function ChatWindow({ chat, chips, inputId, onClose }) {
             <div className="flex items-center gap-2">
               <h4 className="text-sm font-bold">{chat.persona || 'Support Specialist'}</h4>
               <span className="rounded bg-primary-fixed px-1.5 py-0.5 text-[10px] font-bold text-on-primary-fixed">
-                On Duty
+                On duty
               </span>
             </div>
-            <p className="text-[11px] text-white/70">Live Help Desk • Ready to respond</p>
+            <p className="text-[11px] text-white/70">Live help desk • Ready to respond</p>
           </div>
         </div>
         {onClose && (
@@ -41,7 +41,7 @@ export default function ChatWindow({ chat, chips, inputId, onClose }) {
           <span className="text-[11px] text-on-surface-variant">(14,200+ verified ratings)</span>
         </div>
         <span className="flex items-center gap-1 text-[11px] font-bold text-primary">
-          <span className="material-symbols-outlined text-[14px]">check_circle</span> 100% Real People
+          <span className="material-symbols-outlined text-[14px]">check_circle</span> 100% real people
         </span>
       </div>
 
@@ -55,15 +55,15 @@ export default function ChatWindow({ chat, chips, inputId, onClose }) {
           footer={
             <div className="flex flex-wrap items-center justify-between gap-1.5 text-[10px] text-on-surface-variant [@media(max-height:760px)]:hidden">
               <span className="flex items-center gap-1">
-                <span className="material-symbols-outlined text-[13px] text-primary">lock</span> Private & Secure Chat
+                <span className="material-symbols-outlined text-[13px] text-primary">lock</span> Private & secure chat
               </span>
               <span className="flex items-center gap-1">
-                <span className="material-symbols-outlined text-[13px] text-primary">verified_user</span> Verified Human
-                Specialists
+                <span className="material-symbols-outlined text-[13px] text-primary">verified_user</span> Verified human
+                specialists
               </span>
               <span className="flex items-center gap-1">
-                <span className="material-symbols-outlined text-[13px] text-primary">chat_bubble</span> Free of Cost
-                Answers
+                <span className="material-symbols-outlined text-[13px] text-primary">chat_bubble</span> Free of cost
+                answers
               </span>
             </div>
           }
