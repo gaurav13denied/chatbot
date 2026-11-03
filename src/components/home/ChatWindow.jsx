@@ -45,21 +45,29 @@ export default function ChatWindow({ chat, chips, inputId, onClose }) {
         </span>
       </div>
 
-      <div className="space-y-3.5 overflow-y-auto bg-white p-4 text-on-surface">
-        <ChatPanel chat={chat} large chips={chips} inputId={inputId} />
-        <div className="flex flex-wrap items-center justify-between gap-1.5 border-t border-surface-container pt-3 text-[10px] text-on-surface-variant">
-          <span className="flex items-center gap-1">
-            <span className="material-symbols-outlined text-[13px] text-primary">lock</span> Private & Secure Chat
-          </span>
-          <span className="flex items-center gap-1">
-            <span className="material-symbols-outlined text-[13px] text-primary">verified_user</span> Verified Human
-            Specialists
-          </span>
-          <span className="flex items-center gap-1">
-            <span className="material-symbols-outlined text-[13px] text-primary">chat_bubble</span> Free of Cost
-            Answers
-          </span>
-        </div>
+      <div className="flex min-h-0 flex-1 flex-col bg-white p-4 text-on-surface">
+        <ChatPanel
+          chat={chat}
+          large
+          pinned
+          chips={chips}
+          inputId={inputId}
+          footer={
+            <div className="flex flex-wrap items-center justify-between gap-1.5 text-[10px] text-on-surface-variant [@media(max-height:760px)]:hidden">
+              <span className="flex items-center gap-1">
+                <span className="material-symbols-outlined text-[13px] text-primary">lock</span> Private & Secure Chat
+              </span>
+              <span className="flex items-center gap-1">
+                <span className="material-symbols-outlined text-[13px] text-primary">verified_user</span> Verified Human
+                Specialists
+              </span>
+              <span className="flex items-center gap-1">
+                <span className="material-symbols-outlined text-[13px] text-primary">chat_bubble</span> Free of Cost
+                Answers
+              </span>
+            </div>
+          }
+        />
       </div>
     </div>
   );
