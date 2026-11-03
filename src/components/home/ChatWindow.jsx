@@ -4,11 +4,11 @@ import ChatPanel, { Avatar } from './ChatPanel.jsx';
 export default function ChatWindow({ chat, chips, inputId, onClose }) {
   return (
     <div className="flex min-h-0 flex-1 flex-col">
-      <div className="flex items-center justify-between gap-3 bg-on-surface px-4 py-3.5 text-white">
+      <div className="flex items-center justify-between gap-3 bg-[#003733] px-4 py-3.5 text-white">
         <div className="flex items-center gap-3">
           <div className="relative">
             <Avatar name={chat.persona} className="size-10 text-base !bg-primary-fixed !text-on-primary-fixed" />
-            <span className="absolute bottom-0 right-0 size-3 rounded-full bg-emerald-400 border-2 border-on-surface" />
+            <span className="absolute bottom-0 right-0 size-3 rounded-full bg-emerald-400 border-2 border-[#003733]" />
           </div>
           <div>
             <div className="flex items-center gap-2">

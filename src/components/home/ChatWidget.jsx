@@ -55,7 +55,7 @@ export default function ChatWidget({ chips, inputId }) {
           setNudge(false);
         }}
         aria-label="Chat with an expert"
-        className={`fixed bottom-5 right-4 sm:right-6 z-40 flex items-center gap-2.5 rounded-full bg-on-surface py-3.5 pl-4 pr-5 text-sm font-bold text-white shadow-[0_12px_32px_-8px_rgba(19,27,46,0.6)] ring-1 ring-white/20 transition-all duration-300 hover:bg-primary ${
+        className={`fixed bottom-5 right-4 sm:right-6 z-40 flex items-center gap-2.5 rounded-full bg-[#003733] py-3.5 pl-4 pr-5 text-sm font-bold text-white shadow-[0_12px_32px_-8px_rgba(19,27,46,0.6)] ring-1 ring-white/20 transition-all duration-300 hover:bg-primary ${
           open ? 'pointer-events-none translate-y-6 opacity-0' : 'translate-y-0 opacity-100'
         }`}
       >
