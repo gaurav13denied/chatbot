@@ -7,7 +7,7 @@ export default function HomeHeader() {
         <div className="flex items-center justify-between h-14">
           <div className="flex items-center gap-7">
             <Link className="flex items-center gap-2.5 group" to="/">
-                <img src="/images/logo.png" alt="AskAnythingAnswers" width="245" height="66" className="h-9 w-auto transition-transform group-hover:scale-[1.03]" />
+                <img src="/images/logo.png" alt="AskAnythingAnswers" width="296" height="57" className="h-8 sm:h-10 w-auto transition-transform group-hover:scale-[1.03]" />
             </Link>
             <nav className="hidden lg:flex items-center gap-6">
               <a
