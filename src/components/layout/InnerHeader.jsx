@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import BrandMark from '../BrandMark.jsx';
 
 const NAV = [
   { key: 'how', label: 'How It Works', to: '/#how-it-works' },
@@ -16,12 +15,7 @@ export default function InnerHeader({ active }) {
         <div className="flex items-center justify-between h-14">
           <div className="flex items-center gap-7">
             <Link className="flex items-center gap-2.5 group" to="/">
-              <div className="size-7 rounded-lg bg-primary text-on-primary flex items-center justify-center shadow-sm shadow-primary/20 transition-transform group-hover:scale-105">
-                <BrandMark className="size-4" />
-              </div>
-              <span className="text-on-surface font-headline-lg text-xl font-bold tracking-tight">
-                AskAnythingAnswers
-              </span>
+                <img src="/images/logo.png" alt="AskAnythingAnswers" width="245" height="66" className="h-9 w-auto transition-transform group-hover:scale-[1.03]" />
             </Link>
             <nav className="hidden lg:flex items-center gap-6">
               {NAV.map((item) =>
