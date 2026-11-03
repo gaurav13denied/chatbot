@@ -2,8 +2,6 @@ import { useEffect } from 'react';
 import HomeHeader from '../components/layout/HomeHeader.jsx';
 import HomeFooter from '../components/layout/HomeFooter.jsx';
 import Hero from '../components/home/Hero.jsx';
-import TrustBar from '../components/home/TrustBar.jsx';
-import { ScrollProgress } from '../components/fx.jsx';
 import Categories from '../components/home/Categories.jsx';
 import Specialists from '../components/home/Specialists.jsx';
 import HowItWorks from '../components/home/HowItWorks.jsx';
@@ -22,11 +20,9 @@ export default function Home() {
 
   return (
     <div className="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
-      <ScrollProgress />
       <HomeHeader />
       <main className="flex-1">
         <Hero />
-        <TrustBar />
         <Categories />
         <Specialists />
         <HowItWorks />

@@ -22,6 +22,22 @@ export default function App() {
           }
         />
         <Route
+          path="/category/printers-1"
+          element={
+            <InnerLayout active="categories">
+              <Printers media="video" />
+            </InnerLayout>
+          }
+        />
+        <Route
+          path="/category/printers-2"
+          element={
+            <InnerLayout active="categories">
+              <Printers media="image" />
+            </InnerLayout>
+          }
+        />
+        <Route
           path="/contact"
           element={
             <InnerLayout active="contact">

@@ -1,7 +1,7 @@
 import Photo from '../components/Photo.jsx';
 import { Link } from 'react-router-dom';
 import useChat from '../lib/useChat.js';
-import ChatPanel from '../components/home/ChatPanel.jsx';
+import ChatWindow from '../components/home/ChatWindow.jsx';
 
 // Starter chips that fill the intake box
 const QUICK_CHIPS = [
@@ -12,12 +12,40 @@ const QUICK_CHIPS = [
   "Won't Print from Phone/Mac",
 ];
 
-export default function Printers() {
+// media: undefined = the original page, 'video' = looping video behind the hero, 'image' = photo behind the hero
+export default function Printers({ media }) {
   const chat = useChat();
 
   return (
     <div className="flex flex-col w-full">
-      <div className="relative w-full overflow-hidden">
+      <div className="relative isolate w-full overflow-hidden">
+        {media && (
+          <>
+            {/* Hero background for the video / image variants, softened with a light wash so the page stays light */}
+            {media === 'video' ? (
+              <video
+                className="absolute inset-0 -z-20 size-full object-cover"
+                src="/media/printer-hero.mp4"
+                poster="/media/printer-hero-poster.jpg"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+                aria-hidden="true"
+              />
+            ) : (
+              <img
+                className="absolute inset-0 -z-20 size-full object-cover"
+                src="/media/printer-cartridges.jpg"
+                alt=""
+                aria-hidden="true"
+              />
+            )}
+            <div className="absolute inset-0 -z-10 bg-gradient-to-r from-surface via-surface/90 to-surface/55" aria-hidden="true" />
+            <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-surface to-transparent" aria-hidden="true" />
+          </>
+        )}
         <div className="absolute -top-40 right-1/4 w-96 h-96 bg-primary-fixed/30 rounded-full blur-3xl pointer-events-none -z-10" />
         <div className="absolute top-96 -left-20 w-80 h-80 bg-secondary-fixed/25 rounded-full blur-3xl pointer-events-none -z-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-4">
@@ -35,9 +63,9 @@ export default function Printers() {
           </nav>
         </div>
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-16 lg:pb-24">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-            <div className="lg:col-span-7 flex flex-col pt-2">
-              <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface w-fit mb-5 shadow-sm">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-0 gap-x-10 lg:gap-10 items-center">
+            <div className="contents lg:flex lg:col-span-7 lg:flex-col lg:pt-2">
+              <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface w-fit mb-5 shadow-sm order-1 lg:order-none">
                 <div className="flex items-center text-amber-500">
                   <span
                     className="material-symbols-outlined text-[16px]"
@@ -74,16 +102,16 @@ export default function Printers() {
                   4.9/5 from 8,400+ printer questions resolved
                 </span>
               </div>
-              <h1 className="font-headline-lg text-headline-lg lg:text-display-lg text-on-surface tracking-tight font-medium mb-5 leading-tight">
+              <h1 className="font-headline-lg text-headline-lg lg:text-display-lg text-on-surface tracking-tight font-medium mb-5 leading-tight order-2 lg:order-none">
                 {' '}
                 Get Instant Help for Any Printer or Scanner Issue{' '}
               </h1>
-              <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-8 leading-relaxed">
+              <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-8 leading-relaxed order-4 lg:order-none">
                 {' '}
                 Troubleshoot offline errors, driver installation, paper jams, wireless connectivity, and ink
                 cartridge problems with verified specialists who know your exact printer brand.{' '}
               </p>
-              <div className="flex items-center gap-3.5 p-3.5 rounded-xl bg-surface-container-lowest shadow-sm max-w-xl">
+              <div className="flex items-center gap-3.5 p-3.5 rounded-xl bg-surface-container-lowest shadow-sm max-w-xl order-5 lg:order-none">
                 <div className="relative flex-shrink-0">
                   <Photo
                     alt="David M. Specialist"
@@ -108,7 +136,7 @@ export default function Printers() {
                   </p>
                 </div>
               </div>
-              <div className="grid grid-cols-3 gap-4 pt-8 max-w-xl">
+              <div className="grid grid-cols-3 gap-4 pt-8 max-w-xl order-6 lg:order-none">
                 <div className="p-3 bg-surface-container-low rounded-lg">
                   <p className="font-headline-sm text-headline-sm font-bold text-on-surface">98.4%</p>
                   <p className="font-label-sm text-label-sm text-on-surface-variant">
@@ -125,31 +153,18 @@ export default function Printers() {
                 </div>
               </div>
             </div>
-            <div className="lg:col-span-5" id="quick-match">
-              <div className="bg-surface-container-lowest rounded-2xl shadow-xl p-6 sm:p-7 relative">
-                <div className="flex items-center justify-between pb-4 mb-4 bg-surface-container-low -mx-6 -mt-6 px-6 pt-5 rounded-t-2xl">
-                  <div className="flex items-center gap-2.5">
-                    <span className="size-2.5 rounded-full bg-emerald-500 animate-ping" />
-                    <h3 className="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">
-                      Printer Help Desk
-                    </h3>
-                  </div>
-                  <span className="px-2.5 py-1 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-bold">
-                    Live Specialist Ready
-                  </span>
+            <div className="order-3 lg:order-none lg:col-span-5 scroll-mt-24 mb-8 lg:mb-0" id="quick-match">
+              <div className="flex flex-col overflow-hidden rounded-2xl bg-surface-container-lowest shadow-[0_30px_80px_-30px_rgba(19,27,46,0.45)] ring-1 ring-black/10">
+                <ChatWindow chat={chat} chips={QUICK_CHIPS} inputId="printer-issue-input" />
+              </div>
+              <div className="mt-4 flex flex-col gap-2 px-1">
+                <div className="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+                  <span className="material-symbols-outlined text-primary text-[18px]">verified</span>
+                  <span>100% Real Human Specialists • No automated bot loops</span>
                 </div>
-                <div className="space-y-3">
-                  <ChatPanel chat={chat} chips={QUICK_CHIPS} inputId="printer-issue-input" />
-                </div>
-                <div className="mt-4 pt-4 bg-surface-container-lowest flex flex-col gap-2">
-                  <div className="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
-                    <span className="material-symbols-outlined text-primary text-[18px]">verified</span>
-                    <span>100% Real Human Specialists • No automated bot loops</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
-                    <span className="material-symbols-outlined text-primary text-[18px]">task_alt</span>
-                    <span>Step-by-step guidance until you successfully print a page</span>
-                  </div>
+                <div className="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+                  <span className="material-symbols-outlined text-primary text-[18px]">task_alt</span>
+                  <span>Step-by-step guidance until you successfully print a page</span>
                 </div>
               </div>
             </div>
@@ -803,10 +818,7 @@ export default function Printers() {
               right now and print your documents with peace of mind.{' '}
             </p>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-              <a
-                className="inline-flex items-center justify-center px-7 py-4 rounded-xl bg-surface-container-lowest text-primary font-headline-sm text-headline-sm font-bold shadow-md hover:bg-surface-container-low transition-all text-center"
-                href="#quick-match"
-              >
+              <a className="inline-flex items-center justify-center px-7 py-4 rounded-xl bg-surface-container-lowest text-primary font-headline-sm text-headline-sm font-bold shadow-md hover:bg-surface-container-low transition-all text-center" href="#quick-match">
                 {' '}
                 Connect with a Specialist Now{' '}
               </a>
