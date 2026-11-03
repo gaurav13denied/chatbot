@@ -107,11 +107,11 @@ export default function Printers({ media }) {
                   4.9/5 from 8,400+ printer questions resolved
                 </span>
               </div>
-              <h1 className="font-headline-lg text-headline-lg lg:text-display-lg text-on-surface tracking-tight font-medium mb-5 leading-tight order-2 lg:order-none">
+              <h1 className="font-headline-lg text-headline-lg lg:text-display-lg text-on-surface tracking-tight font-medium mb-5 leading-tight order-2 lg:order-none min-[1280px]:max-[1439px]:text-[54px]">
                 {' '}
                 Get Instant Help for Any Printer or Scanner Issue{' '}
               </h1>
-              <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-8 leading-relaxed order-4 lg:order-none">
+              <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-8 leading-relaxed order-4 lg:order-none min-[1280px]:max-[1439px]:text-base">
                 {' '}
                 Troubleshoot offline errors, driver installation, paper jams, wireless connectivity, and ink
                 cartridge problems with verified specialists who know your exact printer brand.{' '}
