@@ -164,7 +164,7 @@ export default function Printers({ media }) {
               <div className="mt-4 flex flex-col gap-2 px-1">
                 <div className="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
                   <span className="material-symbols-outlined text-primary text-[18px]">verified</span>
-                  <span>100% Real Human Specialists • No automated bot loops</span>
+                  <span>100% human specialists • No automated bot loops</span>
                 </div>
                 <div className="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
                   <span className="material-symbols-outlined text-primary text-[18px]">task_alt</span>

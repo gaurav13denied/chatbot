@@ -68,7 +68,7 @@ export default function Hero() {
             <div className="flex flex-wrap items-center gap-3.5 text-xs text-on-surface font-semibold pt-0.5">
               <div className="flex items-center gap-1.5">
                 <span className="material-symbols-outlined text-primary text-[18px]">verified</span>
-                <span>100% Real Human Specialists</span>
+                <span>100% human specialists</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <span className="material-symbols-outlined text-primary text-[18px]">bolt</span>
