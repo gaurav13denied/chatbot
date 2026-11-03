@@ -1,0 +1,51 @@
+// Shared by the Specialists and Recent Cases sections. Photos live in /public/images.
+export const SPECIALISTS = [
+  {
+    name: 'David M.',
+    role: 'Printer & Computer Specialist',
+    rating: '4.98',
+    count: '3,420+',
+    text: 'Fixes printer connection issues, paper feed errors, and driver problems.',
+    photo: '/images/david-m.jpg',
+  },
+  {
+    name: 'Elena R.',
+    role: 'Mac & Windows System Expert',
+    rating: '4.96',
+    count: '3,180+',
+    text: 'Resolves slow computers, system errors, and software setup.',
+    photo: '/images/elena-r.jpg',
+  },
+  {
+    name: 'Maria R.',
+    role: 'Car & Vehicle Specialist',
+    rating: '4.97',
+    count: '2,850+',
+    text: 'Diagnoses dashboard warning lights, engine noise, and vehicle electrical issues.',
+    photo: '/images/maria-r.jpg',
+  },
+  {
+    name: 'Sarah C.',
+    role: 'Smart Home & Devices Specialist',
+    rating: '4.95',
+    count: '1,920+',
+    text: 'Fixes smart TVs, tablets, phone sync, and home audio connections.',
+    photo: '/images/sarah-c.jpg',
+  },
+  {
+    name: 'Robert M.',
+    role: 'Home Electrical & Appliance Expert',
+    rating: '4.99',
+    count: '4,110+',
+    text: 'Helps diagnose washing machines, refrigerators, and home wiring questions.',
+    photo: '/images/robert-m.jpg',
+  },
+  {
+    name: 'Marcus B.',
+    role: 'Wi-Fi & Internet Expert',
+    rating: '4.97',
+    count: '2,410+',
+    text: 'Solves dropped Wi-Fi signals, router setups, and network dead zones.',
+    photo: '/images/marcus-b.jpg',
+  },
+];
