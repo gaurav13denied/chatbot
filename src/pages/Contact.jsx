@@ -493,20 +493,20 @@ export default function Contact() {
                 coordinators are hands-on engineers and technology veterans who review every pairing
                 personally when nuanced help is needed.{' '}
               </p>
-              <div className="grid grid-cols-3 gap-4 pt-2">
-                <div className="bg-surface-container-lowest rounded-lg p-3 text-center">
-                  <span className="block font-headline-sm text-headline-sm text-primary">98.4%</span>{' '}
-                  <span className="font-body-sm text-[12px] text-on-surface-variant">
+              <div className="grid grid-cols-3 gap-2 sm:gap-4 pt-2">
+                <div className="bg-surface-container-lowest rounded-lg px-1.5 py-3 sm:p-3 text-center min-w-0">
+                  <span className="block font-headline-sm text-[1.0625rem] max-[359px]:text-[0.9375rem] sm:text-headline-sm font-semibold text-primary">98.4%</span>{' '}
+                  <span className="font-body-sm text-[11px] sm:text-[12px] leading-snug text-on-surface-variant">
                     First-contact match rate
                   </span>
                 </div>
-                <div className="bg-surface-container-lowest rounded-lg p-3 text-center">
-                  <span className="block font-headline-sm text-headline-sm text-primary">12,000+</span>{' '}
-                  <span className="font-body-sm text-[12px] text-on-surface-variant">Daily resolutions</span>
+                <div className="bg-surface-container-lowest rounded-lg px-1.5 py-3 sm:p-3 text-center min-w-0">
+                  <span className="block font-headline-sm text-[1.0625rem] max-[359px]:text-[0.9375rem] sm:text-headline-sm font-semibold text-primary">12,000+</span>{' '}
+                  <span className="font-body-sm text-[11px] sm:text-[12px] leading-snug text-on-surface-variant">Daily resolutions</span>
                 </div>
-                <div className="bg-surface-container-lowest rounded-lg p-3 text-center">
-                  <span className="block font-headline-sm text-headline-sm text-primary">{'<'}90s</span>{' '}
-                  <span className="font-body-sm text-[12px] text-on-surface-variant">
+                <div className="bg-surface-container-lowest rounded-lg px-1.5 py-3 sm:p-3 text-center min-w-0">
+                  <span className="block font-headline-sm text-[1.0625rem] max-[359px]:text-[0.9375rem] sm:text-headline-sm font-semibold text-primary">{'<'}90s</span>{' '}
+                  <span className="font-body-sm text-[11px] sm:text-[12px] leading-snug text-on-surface-variant">
                     Average pairing speed
                   </span>
                 </div>
