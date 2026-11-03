@@ -1,6 +1,6 @@
 import Photo from '../Photo.jsx';
 import useChat from '../../lib/useChat.js';
-import ChatPanel, { Avatar } from './ChatPanel.jsx';
+import ChatWindow from './ChatWindow.jsx';
 
 export default function Hero() {
   const chat = useChat();
@@ -9,7 +9,8 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <Photo
           alt="Bright, sunlit workspace with a laptop"
-          className="w-full h-full object-cover object-left md:object-center"
+          className="w-full h-full object-cover object-left md:object-center"
+
           local="/images/hero.jpg"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-surface-container-lowest/95 via-surface-container-lowest/90 to-surface-container-lowest/75 lg:from-surface-container-lowest/95 lg:via-surface-container-lowest/80 lg:to-surface-container-lowest/40 backdrop-blur-[1px]" />
@@ -80,65 +81,12 @@ export default function Hero() {
             </div>
           </div>
           <div className="lg:col-span-5 relative">
+            {/* Same chat window as the printers page: header, scrolling messages, reply box pinned at the bottom */}
             <div
-              className="bg-surface-container-lowest rounded-xl border border-outline-variant/40 shadow-xl overflow-hidden max-w-lg ml-auto"
+              className="ml-auto flex w-full max-w-lg flex-col overflow-hidden rounded-2xl bg-surface-container-lowest shadow-[0_30px_80px_-30px_rgba(19,27,46,0.45)] ring-1 ring-black/10 lg:h-[min(640px,calc(100vh-11rem))] lg:min-h-[430px]"
               id="quick-match"
             >
-              <div className="bg-surface-container-low px-4 py-2.5 border-b border-surface-container flex items-center justify-between">
-                <div className="flex items-center gap-2.5">
-                  <div className="relative">
-                    <Avatar name={chat.persona} className="size-8 text-xs border-2 border-primary" />
-                    <span className="absolute bottom-0 right-0 size-2.5 rounded-full bg-emerald-500 border-2 border-white animate-pulse" />
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-1.5">
-                      <h4 className="text-xs font-bold text-on-surface">{chat.persona || "Support Specialist"}</h4>
-                      <span className="px-1.5 py-0.2 rounded-full bg-primary-fixed text-on-primary-fixed text-[10px] font-bold">
-                        On Duty
-                      </span>
-                    </div>
-                    <p className="text-[11px] text-on-surface-variant flex items-center gap-1">
-                      <span className="size-1.5 rounded-full bg-emerald-500" /> Live Help Desk • Ready to respond
-                    </p>
-                  </div>
-                </div>
-                <div className="text-right">
-                  <span className="text-xs font-bold text-primary block">{'<'} 90 seconds</span>
-                  <span className="text-[10px] text-on-surface-variant leading-none">typical reply</span>
-                </div>
-              </div>
-              <div className="px-4 py-1.5 bg-surface-container-lowest border-b border-surface-container flex items-center justify-between text-xs">
-                <div className="flex items-center gap-1 text-amber-500">
-                  <span
-                    className="material-symbols-outlined text-[14px] fill-1"
-                    style={{ fontVariationSettings: "'FILL' 1" }}
-                  >
-                    star
-                  </span>
-                  <span className="font-bold text-on-surface text-xs">4.9/5</span>
-                  <span className="text-on-surface-variant text-[11px]">(14,200+ verified ratings)</span>
-                </div>
-                <span className="text-primary font-bold text-[11px] flex items-center gap-1">
-                  <span className="material-symbols-outlined text-[13px]">check_circle</span> 100% Real People
-                </span>
-              </div>
-              <div className="p-3.5 sm:p-4 space-y-2.5">
-                <ChatPanel chat={chat} />
-                <div className="pt-1.5 border-t border-surface-container flex flex-wrap items-center justify-between text-[10px] text-on-surface-variant gap-1.5">
-                  <span className="flex items-center gap-1">
-                    <span className="material-symbols-outlined text-primary text-[13px]">lock</span> Private &
-                    Secure Chat
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <span className="material-symbols-outlined text-primary text-[13px]">verified_user</span>{' '}
-                    Verified Human Specialists
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <span className="material-symbols-outlined text-primary text-[13px]">chat_bubble</span>{' '}
-                    Free of Cost Answers
-                  </span>
-                </div>
-              </div>
+              <ChatWindow chat={chat} />
             </div>
           </div>
         </div>
