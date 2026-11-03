@@ -106,7 +106,7 @@ export default function InnerFooter() {
           </div>
         </div>
         <div className="pt-8 border-t border-surface-container flex flex-col sm:flex-row items-center justify-between text-xs text-on-surface-variant gap-4">
-          <p>© 2026 AskAnythingAnswers. Dedicated to high-trust human guidance.</p>
+          <p>© 2026 AskAnythingAnswers. Dedicated to trust-worthy human guidance.</p>
         </div>
       </div>
     </footer>
