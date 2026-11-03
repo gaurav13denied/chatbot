@@ -65,7 +65,7 @@ export default function Printers({ media }) {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-16 lg:pb-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-0 gap-x-10 lg:gap-10 items-center">
             <div className="contents lg:flex lg:col-span-7 lg:flex-col lg:pt-2">
-              <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface w-fit mb-5 shadow-sm order-1 lg:order-none">
+              <div className="inline-flex flex-col items-start gap-1 sm:flex-row sm:items-center sm:gap-2.5 px-3.5 sm:px-3 py-2 sm:py-1.5 rounded-xl sm:rounded-full bg-surface-container-low text-on-surface w-fit max-w-full mb-5 shadow-sm order-1 lg:order-none">
                 <div className="flex items-center text-amber-500">
                   <span
                     className="material-symbols-outlined text-[16px]"
@@ -99,7 +99,7 @@ export default function Printers({ media }) {
                   </span>
                 </div>
                 <span className="font-label-md text-label-md font-bold tracking-tight">
-                  4.9/5<br className="sm:hidden" /> from 8,400+ printer questions resolved
+                  4.9/5 from 8,400+ printer questions resolved
                 </span>
               </div>
               <h1 className="font-headline-lg text-headline-lg lg:text-display-lg text-on-surface tracking-tight font-medium mb-5 leading-tight order-2 lg:order-none">
