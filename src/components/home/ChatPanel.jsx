@@ -30,10 +30,18 @@ export default function ChatPanel({ chat, chips = CHIPS, inputId = 'hero-chat-in
   const [draft, setDraft] = useState('');
   const listRef = useRef(null);
 
-  useEffect(() => {
+  // Jump straight to the newest message (no animation, so a reply arriving mid-scroll can never leave it short)
+  const toBottom = () => {
     const el = listRef.current;
-    if (el) el.scrollTop = el.scrollHeight;
-  }, [messages, typing]);
+    if (!el) return;
+    el.scrollTop = el.scrollHeight;
+    requestAnimationFrame(() => {
+      el.scrollTop = el.scrollHeight;
+    });
+  };
+
+  // A new message, the typing dots, or the visitor typing: keep the latest message in view
+  useEffect(toBottom, [messages, typing, draft]);
 
   // "Ask an expert" buttons elsewhere on the page: bring the chat into view and focus the box
   useEffect(() => {
@@ -160,6 +168,7 @@ export default function ChatPanel({ chat, chips = CHIPS, inputId = 'hero-chat-in
           rows={large || pinned ? 2 : 2}
           maxLength={1000}
           value={draft}
+          onFocus={toBottom}
           onChange={(e) => setDraft(e.target.value)}
           onKeyDown={(e) => {
             if (e.key === 'Enter' && !e.shiftKey) submit(e);
@@ -181,7 +190,7 @@ export default function ChatPanel({ chat, chips = CHIPS, inputId = 'hero-chat-in
   if (pinned) {
     return (
       <div className="flex min-h-0 flex-1 flex-col gap-3">
-        <div ref={listRef} aria-live="polite" className="min-h-0 flex-1 space-y-4 overflow-y-auto pr-1 max-h-[420px] lg:max-h-none">
+        <div ref={listRef} aria-live="polite" className="chat-scroll chat-scroll-fade min-h-0 flex-1 space-y-4 overflow-y-auto py-3 pr-1.5 max-h-[420px] lg:max-h-none">
           {list}
           {starters}
         </div>
@@ -198,7 +207,7 @@ export default function ChatPanel({ chat, chips = CHIPS, inputId = 'hero-chat-in
       <div
         ref={listRef}
         aria-live="polite"
-        className={`space-y-2.5 overflow-y-auto pr-1 ${large ? 'max-h-[360px] min-h-[90px] space-y-4' : 'max-h-[210px]'}`}
+        className={`chat-scroll space-y-2.5 overflow-y-auto pr-1 ${large ? 'max-h-[360px] min-h-[90px] space-y-4' : 'max-h-[210px]'}`}
       >
         {list}
       </div>
