@@ -67,7 +67,7 @@ export default function Printers({ media }) {
             <span className="text-primary font-bold">Printers & Scanners</span>
           </nav>
         </div>
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-16 lg:pb-24">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-8 lg:pb-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-0 gap-x-10 lg:gap-10 items-center">
             <div className="contents lg:flex lg:col-span-7 lg:flex-col lg:pt-2">
               <div className="inline-flex flex-col items-start gap-1 sm:flex-row sm:items-center sm:gap-2.5 px-3.5 sm:px-3 py-2 sm:py-1.5 rounded-xl sm:rounded-full bg-surface-container-low text-on-surface w-fit max-w-full mb-5 shadow-sm order-1 lg:order-none">
@@ -175,7 +175,7 @@ export default function Printers({ media }) {
           </div>
         </section>
       </div>
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 lg:pt-10 lg:pb-24">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <span className="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">
             Diagnosed in Minutes
