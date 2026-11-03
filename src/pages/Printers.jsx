@@ -99,7 +99,7 @@ export default function Printers({ media }) {
                   </span>
                 </div>
                 <span className="font-label-md text-label-md font-bold tracking-tight">
-                  4.9/5 from 8,400+ printer questions resolved
+                  4.9/5<br className="sm:hidden" /> from 8,400+ printer questions resolved
                 </span>
               </div>
               <h1 className="font-headline-lg text-headline-lg lg:text-display-lg text-on-surface tracking-tight font-medium mb-5 leading-tight order-2 lg:order-none">
