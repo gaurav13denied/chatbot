@@ -22,6 +22,8 @@ jobs:
 
       - run: npm ci
       - run: npm run build
+        env:
+          VITE_API_URL: https://chatbot.fsd2cloud.com
 
       - name: Set up SSH
         run: |
