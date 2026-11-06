@@ -8,6 +8,8 @@ import react from '@vitejs/plugin-react';
 const target = process.env.VITE_PROXY_TARGET || 'https://chatbot.fsd2cloud.com';
 
 export default defineConfig({
+  // Site is served from /chatbot/ (askanythinganswers.com/chatbot)
+  base: '/chatbot/',
   plugins: [react()],
   server: {
     port: 5173,

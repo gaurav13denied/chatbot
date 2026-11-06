@@ -1,4 +1,5 @@
 import Photo from '../Photo.jsx';
+import { asset } from '../../lib/asset.js';
 export default function RecentCases() {
   return (
     <section className="py-16 bg-surface-container-low border-b border-surface-container" id="recent-cases">
@@ -40,7 +41,7 @@ export default function RecentCases() {
                 <Photo
                   alt="David M."
                   className="size-10 rounded-full object-cover border border-outline-variant"
-                  local="/images/david-m.jpg"
+                  local={asset("/images/david-m.jpg")}
                 />
                 <div>
                   <p className="text-xs font-bold text-on-surface">Solved by David M.</p>
@@ -71,7 +72,7 @@ export default function RecentCases() {
                 <Photo
                   alt="Elena R."
                   className="size-10 rounded-full object-cover border border-outline-variant"
-                  local="/images/elena-r.jpg"
+                  local={asset("/images/elena-r.jpg")}
                 />
                 <div>
                   <p className="text-xs font-bold text-on-surface">Solved by Elena R.</p>
@@ -102,7 +103,7 @@ export default function RecentCases() {
                 <Photo
                   alt="Maria R."
                   className="size-10 rounded-full object-cover border border-outline-variant"
-                  local="/images/maria-r.jpg"
+                  local={asset("/images/maria-r.jpg")}
                 />
                 <div>
                   <p className="text-xs font-bold text-on-surface">Solved by Maria R.</p>
@@ -133,7 +134,7 @@ export default function RecentCases() {
                 <Photo
                   alt="Marcus B."
                   className="size-10 rounded-full object-cover border border-outline-variant"
-                  local="/images/marcus-b.jpg"
+                  local={asset("/images/marcus-b.jpg")}
                 />
                 <div>
                   <p className="text-xs font-bold text-on-surface">Solved by Marcus B.</p>

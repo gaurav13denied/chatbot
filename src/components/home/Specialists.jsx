@@ -1,4 +1,5 @@
 import Photo from '../Photo.jsx';
+import { asset } from '../../lib/asset.js';
 export default function Specialists() {
   return (
     <section className="py-16 bg-surface-container-low border-b border-surface-container" id="specialists">
@@ -23,7 +24,7 @@ export default function Specialists() {
               <Photo
                 alt="David M."
                 className="size-20 rounded-full object-cover border-2 border-primary/20"
-                local="/images/david-m.jpg"
+                local={asset("/images/david-m.jpg")}
               />
               <span className="absolute bottom-0 right-1 size-3.5 rounded-full bg-emerald-500 border-2 border-white" />
             </div>
@@ -48,7 +49,7 @@ export default function Specialists() {
               <Photo
                 alt="Elena R."
                 className="size-20 rounded-full object-cover border-2 border-primary/20"
-                local="/images/elena-r.jpg"
+                local={asset("/images/elena-r.jpg")}
               />
               <span className="absolute bottom-0 right-1 size-3.5 rounded-full bg-emerald-500 border-2 border-white" />
             </div>
@@ -73,7 +74,7 @@ export default function Specialists() {
               <Photo
                 alt="Maria R."
                 className="size-20 rounded-full object-cover border-2 border-primary/20"
-                local="/images/maria-r.jpg"
+                local={asset("/images/maria-r.jpg")}
               />
               <span className="absolute bottom-0 right-1 size-3.5 rounded-full bg-emerald-500 border-2 border-white" />
             </div>
@@ -98,7 +99,7 @@ export default function Specialists() {
               <Photo
                 alt="Sarah C."
                 className="size-20 rounded-full object-cover border-2 border-primary/20"
-                local="/images/sarah-c.jpg"
+                local={asset("/images/sarah-c.jpg")}
               />
               <span className="absolute bottom-0 right-1 size-3.5 rounded-full bg-emerald-500 border-2 border-white" />
             </div>
@@ -123,7 +124,7 @@ export default function Specialists() {
               <Photo
                 alt="Robert M."
                 className="size-20 rounded-full object-cover border-2 border-primary/20"
-                local="/images/robert-m.jpg"
+                local={asset("/images/robert-m.jpg")}
               />
               <span className="absolute bottom-0 right-1 size-3.5 rounded-full bg-emerald-500 border-2 border-white" />
             </div>
@@ -148,7 +149,7 @@ export default function Specialists() {
               <Photo
                 alt="Marcus B."
                 className="size-20 rounded-full object-cover border-2 border-primary/20"
-                local="/images/marcus-b.jpg"
+                local={asset("/images/marcus-b.jpg")}
               />
               <span className="absolute bottom-0 right-1 size-3.5 rounded-full bg-emerald-500 border-2 border-white" />
             </div>
