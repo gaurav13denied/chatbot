@@ -2,7 +2,6 @@ import Photo from '../components/Photo.jsx';
 import { Link } from 'react-router-dom';
 import useChat from '../lib/useChat.js';
 import ChatWindow from '../components/home/ChatWindow.jsx';
-import { asset } from '../lib/asset.js';
 
 // Starter chips that fill the intake box
 const QUICK_CHIPS = [
@@ -26,8 +25,8 @@ export default function Printers({ media }) {
             {media === 'video' ? (
               <video
                 className="absolute inset-0 -z-20 size-full object-cover"
-                src={asset("/media/printer-hero.mp4")}
-                poster={asset("/media/printer-hero-poster.jpg")}
+                src="/media/printer-hero.mp4"
+                poster="/media/printer-hero-poster.jpg"
                 autoPlay
                 muted
                 loop
@@ -38,7 +37,7 @@ export default function Printers({ media }) {
             ) : (
               <img
                 className="absolute inset-0 -z-20 size-full object-cover"
-                src={asset("/media/printer-kitchen.jpg")}
+                src="/media/printer-kitchen.jpg"
                 alt=""
                 aria-hidden="true"
               />
@@ -122,7 +121,7 @@ export default function Printers({ media }) {
                   <Photo
                     alt="David M. Specialist"
                     className="size-12 rounded-full object-cover shadow-sm"
-                    local={asset("/images/david-m.jpg")}
+                    local="/images/david-m.jpg"
                   />
                   <span className="absolute bottom-0 right-0 size-3 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest" />
                 </div>
@@ -342,7 +341,7 @@ export default function Printers({ media }) {
                     <Photo
                       alt="David M."
                       className="size-16 rounded-xl object-cover shadow-sm"
-                      local={asset("/images/david-m.jpg")}
+                      local="/images/david-m.jpg"
                     />{' '}
                     <span className="absolute -bottom-1 -right-1 size-3.5 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest" />
                   </div>
@@ -393,7 +392,7 @@ export default function Printers({ media }) {
                     <Photo
                       alt="Elena R."
                       className="size-16 rounded-xl object-cover shadow-sm"
-                      local={asset("/images/elena-r.jpg")}
+                      local="/images/elena-r.jpg"
                     />{' '}
                     <span className="absolute -bottom-1 -right-1 size-3.5 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest" />
                   </div>
@@ -442,7 +441,7 @@ export default function Printers({ media }) {
                     <Photo
                       alt="Marcus B."
                       className="size-16 rounded-xl object-cover shadow-sm"
-                      local={asset("/images/marcus-b.jpg")}
+                      local="/images/marcus-b.jpg"
                     />{' '}
                     <span className="absolute -bottom-1 -right-1 size-3.5 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest" />
                   </div>
@@ -526,7 +525,7 @@ export default function Printers({ media }) {
                 <Photo
                   alt="David M."
                   className="size-7 rounded-full object-cover"
-                  local={asset("/images/david-m.jpg")}
+                  local="/images/david-m.jpg"
                 />
                 <span className="font-body-sm text-body-sm font-semibold text-on-surface">
                   Solved by David M.
@@ -558,7 +557,7 @@ export default function Printers({ media }) {
                 <Photo
                   alt="Elena R."
                   className="size-7 rounded-full object-cover"
-                  local={asset("/images/elena-r.jpg")}
+                  local="/images/elena-r.jpg"
                 />
                 <span className="font-body-sm text-body-sm font-semibold text-on-surface">
                   Solved by Elena R.
@@ -590,7 +589,7 @@ export default function Printers({ media }) {
                 <Photo
                   alt="David M."
                   className="size-7 rounded-full object-cover"
-                  local={asset("/images/david-m.jpg")}
+                  local="/images/david-m.jpg"
                 />
                 <span className="font-body-sm text-body-sm font-semibold text-on-surface">
                   Solved by David M.

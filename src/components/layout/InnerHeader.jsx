@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { asset } from '../../lib/asset.js';
 
 const NAV = [
   { key: 'how', label: 'How It Works', to: '/#how-it-works' },
@@ -16,7 +15,7 @@ export default function InnerHeader({ active }) {
         <div className="flex items-center justify-between h-14">
           <div className="flex items-center gap-7">
             <Link className="flex items-center gap-2.5 group" to="/">
-                <img src={asset("/images/logo.png")} alt="AskAnythingAnswers" width="296" height="57" className="h-8 sm:h-10 w-auto transition-transform group-hover:scale-[1.03]" />
+                <img src="/images/logo.png" alt="AskAnythingAnswers" width="296" height="57" className="h-8 sm:h-10 w-auto transition-transform group-hover:scale-[1.03]" />
             </Link>
             <nav className="hidden lg:flex items-center gap-6">
               {NAV.map((item) =>

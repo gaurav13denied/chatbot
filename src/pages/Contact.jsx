@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { useRef, useState } from 'react';
-import { asset } from '../lib/asset.js';
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false); // shows the "message received" state (nothing is sent anywhere)
@@ -464,7 +463,7 @@ export default function Contact() {
               <div className="pt-2 flex items-center gap-3">
                 <img
                   className="size-10 rounded-full object-cover shadow-sm ring-2 ring-primary-fixed"
-                  src={asset("/images/contact-safety-desk.jpg")}
+                  src="/images/contact-safety-desk.jpg"
                   alt="Quality & Safety Desk specialist"
                 />
                 <div>
@@ -516,7 +515,7 @@ export default function Contact() {
             <div className="md:col-span-5 relative">
               <img
                 className="rounded-xl shadow-lg object-cover w-full h-72"
-                src={asset("/images/contact-help-desk.jpg")}
+                src="/images/contact-help-desk.jpg"
                 alt="Help desk specialist wearing a headset"
               />
               <div className="absolute -bottom-4 -left-4 bg-surface-container-lowest p-3 rounded-lg shadow-md flex items-center gap-3">

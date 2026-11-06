@@ -1,7 +1,6 @@
 import Photo from '../Photo.jsx';
 import useChat from '../../lib/useChat.js';
 import ChatWindow from './ChatWindow.jsx';
-import { asset } from '../../lib/asset.js';
 
 export default function Hero() {
   const chat = useChat();
@@ -12,7 +11,7 @@ export default function Hero() {
           alt="Bright, sunlit workspace with a laptop"
           className="w-full h-full object-cover object-left md:object-center"
 
-          local={asset("/images/hero.jpg")}
+          local="/images/hero.jpg"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-surface-container-lowest/95 via-surface-container-lowest/90 to-surface-container-lowest/75 lg:from-surface-container-lowest/95 lg:via-surface-container-lowest/80 lg:to-surface-container-lowest/40 backdrop-blur-[1px]" />
       </div>
