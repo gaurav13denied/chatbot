@@ -141,7 +141,7 @@ export default function Terms() {
 <section className="scroll-mt-20 space-y-4" id="art-4">
 <div className="flex items-center gap-3">
 <span className="size-7 rounded-lg bg-error-container text-error font-bold font-label-md text-label-md flex items-center justify-center">04</span>
-<h2 className="font-headline-md text-headline-md text-on-surface tracking-tight">Independent Specialist Guidance &amp; Safety First</h2>
+<h2 className="font-headline-md text-headline-md text-on-surface tracking-tight">Independent Specialist Guidance and Safety First</h2>
 </div>
 <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
               Physical safety takes precedence over every step. While our specialists provide guidance and services, you are solely responsible for managing the physical environment in which work or adjustments take place.
@@ -233,7 +233,7 @@ export default function Terms() {
 <section className="scroll-mt-20 space-y-4" id="art-7">
 <div className="flex items-center gap-3">
 <span className="size-7 rounded-lg bg-surface-container text-primary font-bold font-label-md text-label-md flex items-center justify-center">07</span>
-<h2 className="font-headline-md text-headline-md text-on-surface tracking-tight">Account Security &amp; Help Desk Support</h2>
+<h2 className="font-headline-md text-headline-md text-on-surface tracking-tight">Account Security and Help Desk Support</h2>
 </div>
 <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
               Maintaining account integrity protects your private session logs and ensures uninterrupted communication with our verified specialist network.
