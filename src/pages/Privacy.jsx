@@ -250,7 +250,7 @@ export default function Privacy() {
 <span className="material-symbols-outlined text-primary text-[20px]">mail</span>
 <span>info@askanythinganswers.com</span>
 </div>
-<p className="font-body-sm text-body-sm text-on-surface-variant">For any questions, feedback or concerns, please contact our support team directly. TECH-FIN SOLUTIONS LLC, 3 Germay Dr, Ste 4 1983, Wilmington, DE 19804</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant">For any questions, feedback or concerns, please contact our support team directly.<br />TECH-FIN SOLUTIONS LLC, 3 Germay Dr, Ste 4 1983, Wilmington, DE 19804</p>
 </div>
 <a className="px-5 py-2.5 bg-primary text-on-primary rounded-lg text-label-md font-label-md hover:bg-primary-container shadow-sm transition-all inline-flex items-center gap-2 shrink-0" href="mailto:info@askanythinganswers.com">
 <span>Send Inquiries</span>
