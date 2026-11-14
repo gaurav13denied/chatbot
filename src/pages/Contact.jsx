@@ -90,7 +90,7 @@ export default function Contact() {
           <div className="bg-surface-container-lowest rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
             <div>
               <div className="size-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                <span className="material-symbols-outlined text-[26px]">chat_spark</span>
+                <span className="material-symbols-outlined text-[26px]">forum</span>
               </div>
               <div className="flex items-center justify-between mb-2">
                 <h3 className="font-headline-sm text-headline-sm text-on-surface">Live Expert Chat</h3>

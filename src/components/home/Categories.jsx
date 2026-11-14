@@ -63,7 +63,7 @@ export default function Categories() {
             <div>
               <div className="flex items-center justify-between mb-4">
                 <div className="size-12 rounded-xl bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
-                  <span className="material-symbols-outlined text-[26px]">directions_car</span>
+                  <span className="material-symbols-outlined text-[26px]">home</span>
                 </div>
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest text-xs font-semibold text-primary">
                   <span className="size-1.5 rounded-full bg-emerald-500" /> 9 Online{' '}
@@ -84,7 +84,7 @@ export default function Categories() {
             <div>
               <div className="flex items-center justify-between mb-4">
                 <div className="size-12 rounded-xl bg-primary-fixed text-on-primary-fixed flex items-center justify-center">
-                  <span className="material-symbols-outlined text-[26px]">tv</span>
+                  <span className="material-symbols-outlined text-[26px]">gavel</span>
                 </div>
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest text-xs font-semibold text-primary">
                   <span className="size-1.5 rounded-full bg-emerald-500" /> 6 Online{' '}

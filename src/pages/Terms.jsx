@@ -161,11 +161,11 @@ export default function Terms() {
 <span><strong>Electrical Safety:</strong> Switch off the power before inspecting geysers, pumps, or any fitting near water. Never touch electrical parts with wet hands.</span>
 </div>
 <div className="bg-surface-container-lowest p-3.5 rounded-lg flex items-start gap-2">
-<span className="material-symbols-outlined text-error text-[18px] shrink-0 mt-0.5">no_crash</span>
+<span className="material-symbols-outlined text-error text-[18px] shrink-0 mt-0.5">water_drop</span>
 <span><strong>Water Lines:</strong> Close the main water valve before opening pipes, taps, or fittings. Never open hot or pressurised lines.</span>
 </div>
 <div className="bg-surface-container-lowest p-3.5 rounded-lg flex items-start gap-2">
-<span className="material-symbols-outlined text-error text-[18px] shrink-0 mt-0.5">hvac</span>
+<span className="material-symbols-outlined text-error text-[18px] shrink-0 mt-0.5">local_fire_department</span>
 <span><strong>Gas &amp; Combustion Lines:</strong> If you suspect fuel leakage or smell natural gas, cease all communication immediately and contact local emergency services.</span>
 </div>
 <div className="bg-surface-container-lowest p-3.5 rounded-lg flex items-start gap-2">
