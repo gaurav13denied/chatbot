@@ -14,6 +14,19 @@
   }
 }
 
+/*
+ * Phones zoom the whole page in when you tap a field whose text is smaller than 16px (iPhone Safari, and
+ * some Android browsers). Keep every typing field at 16px on phones so tapping it never zooms.
+ * (!important is needed to beat size classes such as text-sm / text-xs on the fields.)
+ */
+@media (max-width: 767px) {
+  input:not([type='checkbox']):not([type='radio']):not([type='range']):not([type='file']):not([type='submit']):not([type='button']):not([type='reset']):not([type='image']):not([type='color']),
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
 /* Material Symbols icon font. Kept in the components layer so size utilities like text-[16px] still win. */
 @layer components {
   .material-symbols-outlined {
