@@ -18,6 +18,9 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
           <div className="lg:col-span-7 flex flex-col gap-3.5">
+            <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md border border-outline-variant/40 shadow-sm w-fit">
+              <span className="text-xs sm:text-sm font-bold text-on-surface">Helped 25,000+ users</span>
+            </div>
             <div className="space-y-2">
               <h1 className="font-headline-lg text-3xl sm:text-4xl lg:text-[2.5rem] text-on-surface font-normal tracking-tight leading-[1.15]">
                 Get Real Help from <span className="text-primary italic font-serif">Verified Experts</span> in
