@@ -38,6 +38,8 @@ export default function useChat() {
   const [messages, setMessages] = useState([{ role: 'assistant', content: GREETING }]);
   const [typing, setTyping] = useState(false);
   const [ready, setReady] = useState(false);
+  // Set once the visitor has shared name, email and phone: {name, email, phone}, or true if the server did not send the details
+  const [lead, setLead] = useState(null);
   const sessionId = useRef(null);
   const sending = useRef(false);
 
@@ -47,6 +49,7 @@ export default function useChat() {
     writeStored(s.sessionId);
     setPersona(s.persona);
     setMessages([{ role: 'assistant', content: s.greeting }]);
+    setLead(null);
   }, []);
 
   useEffect(() => {
@@ -61,6 +64,7 @@ export default function useChat() {
             sessionId.current = stored;
             setPersona(h.persona);
             setMessages(h.messages.map((m) => ({ role: m.role, content: m.content })));
+            setLead(h.lead || null);
             return;
           } catch {
             writeStored(null); // expired or unknown session: start a fresh one
@@ -90,6 +94,8 @@ export default function useChat() {
         const r = await call('/api/chat/message', { sessionId: sessionId.current, message: msg });
         setPersona(r.persona);
         setMessages((m) => [...m, { role: 'assistant', content: r.reply }]);
+        if (r.lead) setLead(r.lead);
+        else if (r.leadComplete) setLead(true);
       } catch {
         setMessages((m) => [
           ...m,
@@ -104,5 +110,5 @@ export default function useChat() {
   );
 
   const started = messages.some((m) => m.role === 'user');
-  return { persona, messages, typing, ready, started, send };
+  return { persona, messages, typing, ready, started, lead, send };
 }

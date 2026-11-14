@@ -26,7 +26,7 @@ export function Avatar({ name, className = 'size-6 text-[10px]' }) {
  *         so on a short screen the input is never pushed out of view. `footer` sits under the box.
  */
 export default function ChatPanel({ chat, chips = CHIPS, inputId = 'hero-chat-input', large = false, pinned = false, footer = null }) {
-  const { persona, messages, typing, started, send } = chat;
+  const { persona, messages, typing, started, lead, send } = chat;
   const [draft, setDraft] = useState('');
   const listRef = useRef(null);
 
@@ -41,7 +41,7 @@ export default function ChatPanel({ chat, chips = CHIPS, inputId = 'hero-chat-in
   };
 
   // A new message, the typing dots, or the visitor typing: keep the latest message in view
-  useEffect(toBottom, [messages, typing, draft]);
+  useEffect(toBottom, [messages, typing, draft, lead]);
 
   // "Ask an expert" buttons elsewhere on the page: bring the chat into view and focus the box
   useEffect(() => {
@@ -122,6 +122,33 @@ export default function ChatPanel({ chat, chips = CHIPS, inputId = 'hero-chat-in
     </>
   );
 
+  // Shown once name, email and phone are shared: the details, a thank-you, and when to expect the call
+  const thanks = lead && (
+    <div className="rounded-xl border border-primary/30 bg-primary-fixed/30 p-4 text-on-surface" role="status">
+      <div className="flex items-center gap-2 mb-2">
+        <span className="material-symbols-outlined text-primary text-[22px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+          check_circle
+        </span>
+        <p className={`font-bold ${large ? 'text-base' : 'text-sm'}`}>
+          Thank you{lead.name ? `, ${lead.name}` : ''}!
+        </p>
+      </div>
+      {lead.name && (
+        <dl className={`grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 mb-3 ${large ? 'text-sm' : 'text-xs'}`}>
+          <dt className="text-on-surface-variant font-semibold">Name</dt>
+          <dd className="font-semibold break-words">{lead.name}</dd>
+          <dt className="text-on-surface-variant font-semibold">Email</dt>
+          <dd className="font-semibold break-all">{lead.email}</dd>
+          <dt className="text-on-surface-variant font-semibold">Phone</dt>
+          <dd className="font-semibold break-words">{lead.phone}</dd>
+        </dl>
+      )}
+      <p className={`text-on-surface-variant leading-snug ${large ? 'text-sm' : 'text-xs'}`}>
+        Thank you for sharing your details. A specialist will connect with you in the next few minutes.
+      </p>
+    </div>
+  );
+
   const starters = !started && (
     <div>
       <p className={`font-bold uppercase tracking-wider text-on-surface-variant mb-1.5 ${large ? 'text-[11px]' : 'text-[10px]'}`}>
@@ -192,6 +219,7 @@ export default function ChatPanel({ chat, chips = CHIPS, inputId = 'hero-chat-in
       <div className="flex min-h-0 flex-1 flex-col gap-3">
         <div ref={listRef} aria-live="polite" className="chat-scroll chat-scroll-fade min-h-0 flex-1 space-y-4 overflow-y-auto py-3 pr-1.5 max-h-[420px] lg:max-h-none">
           {list}
+          {thanks}
           {starters}
         </div>
         <div className="shrink-0 space-y-3 border-t border-surface-container pt-3">
@@ -210,6 +238,7 @@ export default function ChatPanel({ chat, chips = CHIPS, inputId = 'hero-chat-in
         className={`chat-scroll space-y-2.5 overflow-y-auto pr-1 ${large ? 'max-h-[360px] min-h-[90px] space-y-4' : 'max-h-[210px]'}`}
       >
         {list}
+        {thanks}
       </div>
       {starters}
       {form}
