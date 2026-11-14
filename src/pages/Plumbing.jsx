@@ -139,20 +139,6 @@ const FAQS = [
   },
 ];
 
-const Stars = ({ className = 'text-amber-500' }) => (
-  <div className={`flex items-center ${className}`}>
-    {[0, 1, 2, 3, 4].map((i) => (
-      <span
-        key={i}
-        className="material-symbols-outlined text-[16px]"
-        style={{ fontVariationSettings: "'FILL' 1" }}
-      >
-        star
-      </span>
-    ))}
-  </div>
-);
-
 export default function Plumbing() {
   const chat = useChat();
 
@@ -444,7 +430,6 @@ export default function Plumbing() {
           <div className="absolute -right-20 -bottom-20 w-96 h-96 bg-primary-container/40 rounded-full blur-2xl pointer-events-none" />
           <div className="relative z-10 max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-on-primary/10 text-on-primary font-label-md text-label-md font-bold mb-6">
-              <Stars className="text-amber-300" />
               <span>8,400+ satisfied customers</span>
             </div>
             <h2 className="font-headline-lg text-headline-lg lg:text-display-lg font-medium tracking-tight text-on-primary mb-4 leading-tight">
