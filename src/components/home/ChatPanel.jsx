@@ -2,9 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import { ASK_EVENT } from '../../lib/askChat.js';
 
 const CHIPS = [
-  "Printer offline or won't print",
-  'Paper jam or error code',
-  'Wi-Fi pairing & setup',
+  'Leaking tap or pipe',
+  'Deep home cleaning',
+  'Rental agreement query',
   'Computer freezing / blue screen',
 ];
 
@@ -153,7 +153,7 @@ export default function ChatPanel({ chat, chips = CHIPS, inputId = 'hero-chat-in
           }`}
           htmlFor={inputId}
         >
-          {started ? 'Your reply' : 'Describe your device or issue'}
+          {started ? 'Your reply' : 'Describe what you need'}
         </label>
         <textarea
           id={inputId}
@@ -163,7 +163,7 @@ export default function ChatPanel({ chat, chips = CHIPS, inputId = 'hero-chat-in
           placeholder={
             started
               ? 'Type your reply...'
-              : "Type your question here (e.g. My HP printer won't connect after Wi-Fi change, or laptop is stuck on a blue screen)..."
+              : 'Type your request here (e.g. My kitchen tap is leaking and I need a plumber today)...'
           }
           rows={large || pinned ? 2 : 2}
           maxLength={1000}

@@ -43,7 +43,7 @@ export default function Privacy() {
 <div className="flex flex-wrap lg:flex-col items-start lg:items-end gap-3 text-on-surface-variant text-label-md font-label-md bg-surface-container-low p-4 rounded-lg">
 <div className="flex items-center gap-2">
 <span className="material-symbols-outlined text-[18px] text-primary">calendar_today</span>
-<span>Effective: <strong className="text-on-surface">October 24, 2026</strong></span>
+<span>Effective: <strong className="text-on-surface">November 11, 2026</strong></span>
 </div>
 </div>
 </div>
@@ -59,7 +59,7 @@ export default function Privacy() {
 <span className="font-label-lg text-label-lg font-bold">Zero Data Brokering</span>
 </div>
 <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-            We never sell, trade, or package your diagnostic records, system logs, or private communications to advertising brokerages or third parties.
+            We never sell, trade, or package your request details, chat records, or private communications to advertising brokerages or third parties.
           </p>
 </div>
 </aside>
@@ -70,7 +70,7 @@ export default function Privacy() {
 <label className="block font-label-sm text-label-sm uppercase tracking-wider text-outline mb-2" htmlFor="mobile-toc-select">Jump to Section</label>
 <select className="w-full bg-surface-container-low text-on-surface text-body-sm rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-primary" id="mobile-toc-select" onChange={(e) => { if (e.target.value) window.location.hash = e.target.value; }}>
 <option value="#section-1">1. Information We Collect</option>
-<option value="#section-2">2. How We Use Diagnostics Data</option>
+<option value="#section-2">2. How We Use Data</option>
 <option value="#section-3">3. Sharing and Disclosure of Data</option>
 <option value="#section-4">4. International Data Operations</option>
 <option value="#section-5">5. Your Rights &amp; Choices</option>
@@ -85,12 +85,12 @@ export default function Privacy() {
 </div>
 </div>
 <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-            When you ask for technical assistance on AskAnythingAnswers, you entrust us with device serial numbers, network screenshots, printer logs, and direct conversations. We treat these material as confidential client work product. Your interactions exist solely to troubleshoot your inquiry, not to fuel algorithmic ad markets.
+            When you ask for help on AskAnythingAnswers, you entrust us with your service requests, location details, photos, documents, and direct conversations. We treat this material as confidential client work product. Your interactions exist solely to resolve your request, not to fuel algorithmic ad markets.
           </p>
 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
 <div className="p-3 bg-surface-container-low rounded-lg">
 <span className="font-label-sm text-label-sm text-primary font-bold block mb-1">Ownership</span>
-<span className="font-body-sm text-body-sm text-on-surface">You own 100% of your chat records and hardware images.</span>
+<span className="font-body-sm text-body-sm text-on-surface">You own 100% of your chat records and uploaded photos.</span>
 </div>
 <div className="p-3 bg-surface-container-low rounded-lg">
 <span className="font-label-sm text-label-sm text-primary font-bold block mb-1">Confidentiality</span>
@@ -109,17 +109,17 @@ export default function Privacy() {
 </div>
 </div>
 <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-            We only gather the minimum necessary data required to route your questions to the right specialist and improve your experience. </p>
+            We only gather the minimum necessary data required to route your requests to the right professional and improve your experience. We do not collect or store payment details online, as payment is handled offline between you and the professional. </p>
 <div className="space-y-4">
 <div className="p-4 bg-surface-container-low rounded-lg space-y-1">
-<h3 className="font-label-lg text-label-lg font-bold text-on-surface">A. Diagnostic Logs</h3>
+<h3 className="font-label-lg text-label-lg font-bold text-on-surface">A. Request Details</h3>
 <p className="font-body-sm text-body-sm text-on-surface-variant">
-                Screen captures, make/model, device firmware numbers, printer queue status dumps, and router config summaries provided during your diagnostic session.
+                Your service need, location, preferred timing, and any details you share during your chat session.
               </p>
 </div>
 <div className="p-4 bg-surface-container-low rounded-lg space-y-1">
 <h3 className="font-label-lg text-label-lg font-bold text-on-surface">B. Media Attachments</h3>
-<p className="font-body-sm text-body-sm text-on-surface-variant">If you choose to visually upload the problem by sharing photos  or short video clips of symptoms, error screen, or mechanical issues, we securely store these files so our experts can review them.  </p>
+<p className="font-body-sm text-body-sm text-on-surface-variant">If you choose to share photos or short video clips of the issue, or documents such as agreements or notices, we securely store these files so our professionals can review them.</p>
 </div>
 <div className="p-4 bg-surface-container-low rounded-lg space-y-1">
 <h3 className="font-label-lg text-label-lg font-bold text-on-surface">C. Contact Identifiers</h3>
@@ -134,31 +134,31 @@ export default function Privacy() {
 <div className="flex items-baseline gap-4">
 <span className="font-headline-md text-headline-md text-primary font-bold">02</span>
 <div>
-<h2 className="font-headline-md text-headline-md text-on-surface font-semibold">How We Use Diagnostics Data</h2>
+<h2 className="font-headline-md text-headline-md text-on-surface font-semibold">How We Use Data</h2>
 
 </div>
 </div>
-<p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">We process your data strictly to manage our platform and deliver a reliable user experience. Specifically, we use your information to: </p>
+<p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">We process your data strictly to manage our platform and deliver a reliable user experience. Specifically, we use your information to: </p>
 
 <div className="p-6 bg-surface-container rounded-xl space-y-3">
 <div className="flex items-center gap-2 text-primary font-label-lg text-label-lg font-bold">
 <span className="material-symbols-outlined text-[22px]">verified</span>
 
 </div>
-<p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Authenticate your access and manage your anonymous question submissions. </p>
+<p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Authenticate your access and manage your service requests. </p>
 </div>
 <ul className="space-y-3 font-body-sm text-body-sm text-on-surface-variant">
 <li className="flex items-start gap-2.5">
 <span className="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
-<span>Route your technical or informational queries to the most appropriate available expert. </span>
+<span>Route your requests to the most appropriate available expert. </span>
 </li>
 <li className="flex items-start gap-2.5">
 <span className="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
-<span>Notify you via email the moment an expert posts a response to your question.  </span>
+<span>Notify you the moment an expert responds to your question. </span>
 </li>
 <li className="flex items-start gap-2.5">
 <span className="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
-<span>Defend against fraudulent activity, spam, or the creation of automated face accounts. </span>
+<span>Defend against fraudulent activity, spam, or the creation of automated fake accounts. </span>
 </li>
 </ul>
 </section>
@@ -171,21 +171,21 @@ export default function Privacy() {
 
 </div>
 </div>
-<p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">We do not  sell your  personal data. This platform is built on transparency, and your information is only shared under the following condditions. </p>
+<p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">We do not  sell your  personal data. This platform is built on transparency, and your information is only shared under the following conditions. </p>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 <div className="p-5 bg-surface-container-low rounded-lg space-y-2">
 <div className="flex items-center gap-2 text-on-surface font-label-lg text-label-lg font-bold">
 <span className="material-symbols-outlined text-primary text-[20px]">badge</span>
-<span>Public &amp; Anonymous Posts</span>
+<span>Matched Professionals</span>
 </div>
-<p className="font-body-sm text-body-sm text-on-surface-variant">The details inside your submitted questions are visible to the experts on the platform so that can formulate answers. </p>
+<p className="font-body-sm text-body-sm text-on-surface-variant">The details of your request are shared only with the professionals who assist you, so they can respond and help.</p>
 </div>
 <div className="p-5 bg-surface-container-low rounded-lg space-y-2">
 <div className="flex items-center gap-2 text-on-surface font-label-lg text-label-lg font-bold">
 <span className="material-symbols-outlined text-primary text-[20px]">gavel</span>
 <span>Trusted Service Provider</span>
 </div>
-<p className="font-body-sm text-body-sm text-on-surface-variant">We partner with essential third-party vendors who assist with cloud storage, website data analytics and automated email delivery. These providers handle your  data strictly according to our direct instructions.  </p>
+<p className="font-body-sm text-body-sm text-on-surface-variant">We partner with essential third-party vendors who assist with cloud storage, website data analytics and automated email delivery. These providers handle your  data strictly according to our direct instructions.  </p>
 </div>
 </div>
 </section>
@@ -198,7 +198,7 @@ export default function Privacy() {
 
 </div>
 </div>
-<p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">Our platform operates globally, and we may transfer, store, and process the information we collect in countries outside your home jusrisdiction.  Data proetction laws vary across regions. When transferring data internationally, we utilize standard contractual safeguards to ensure your information remains secure, private, and treated in accordance with this policy. </p>
+<p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">Our platform is operated by TECH-FIN SOLUTIONS LLC, a company based in the United States, and we may transfer, store, and process the information we collect in countries outside your home jurisdiction. Data protection laws vary across regions. When transferring data internationally, we utilize standard contractual safeguards to ensure your information remains secure, private, and treated in accordance with this policy. </p>
 </section>
 
 <section className="bg-surface-container-lowest rounded-xl p-8 sm:p-10 shadow-sm space-y-6 scroll-mt-24" id="section-5">
@@ -209,7 +209,7 @@ export default function Privacy() {
 
 </div>
 </div>
-<p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">We believe you should remain in full control of your of yournpersonal data. Depending on your physical location and local privacy laws, you may exercise the following rights: </p>
+<p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">We believe you should remain in full control of your personal data. Depending on your physical location and local privacy laws, you may exercise the following rights: </p>
 <div className="space-y-3">
 <div className="flex items-start gap-3 p-3 bg-surface-container-low rounded-lg">
 <span className="material-symbols-outlined text-primary text-[20px] mt-0.5">download</span>
@@ -222,14 +222,14 @@ export default function Privacy() {
 <span className="material-symbols-outlined text-primary text-[20px] mt-0.5">edit_document</span>
 <div>
 
-<span className="font-body-sm text-body-sm text-on-surface-variant"> <b>Account Detail: </b>You have the right to request that we erase your personal data from our active systems.  </span>
+<span className="font-body-sm text-body-sm text-on-surface-variant"> <b>Account Deletion: </b>You have the right to request that we erase your personal data from our active systems.  </span>
 </div>
 </div>
 <div className="flex items-start gap-3 p-3 bg-surface-container-low rounded-lg">
 <span className="material-symbols-outlined text-primary text-[20px] mt-0.5">block</span>
 <div>
 
-<span className="font-body-sm text-body-sm text-on-surface-variant"><b>Communication Options</b>: You can opt out of promotional updates or platform alerts at any time by clicking the "unsubscribe" link at the bottom our emails. The essential notifications like direct alerts than an expert has answered your questions will still be sent.  </span>
+<span className="font-body-sm text-body-sm text-on-surface-variant"><b>Communication Options</b>: You can opt out of promotional updates or platform alerts at any time by clicking the "unsubscribe" link at the bottom of our emails. The essential notifications, such as alerts that an expert has responded to your request, will still be sent.</span>
 </div>
 </div>
 </div>
@@ -243,16 +243,16 @@ export default function Privacy() {
 
 </div>
 </div>
-<p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">Our services are designed exclusively for individuals who are at least 18 years old. We do not knowingly gather or maintain personal data from children under the age of 13. If you discover that a minor has shared personal information with our platform without parental consent, pleast altert us immediately so we can remove the data from our chats. </p>
+<p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">Our services are designed exclusively for individuals who are at least 18 years old. We do not knowingly gather or maintain personal data from children under the age of 18. If you discover that a minor has shared personal information with our platform without parental consent, please alert us immediately so we can remove the data from our chats. </p>
 <div className="bg-surface-container p-6 rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
 <div className="space-y-1">
 <div className="flex items-center gap-2 text-on-surface font-label-lg text-label-lg font-bold">
 <span className="material-symbols-outlined text-primary text-[20px]">mail</span>
-<span>help@askanythinganswers.com </span>
+<span>info@askanythinganswers.com</span>
 </div>
-<p className="font-body-sm text-body-sm text-on-surface-variant">For any questions, feedback or concerns, please contact our support team directly.</p>
+<p className="font-body-sm text-body-sm text-on-surface-variant">For any questions, feedback or concerns, please contact our support team directly. TECH-FIN SOLUTIONS LLC, 3 Germay Dr, Ste 4 1983, Wilmington, DE 19804</p>
 </div>
-<a className="px-5 py-2.5 bg-primary text-on-primary rounded-lg text-label-md font-label-md hover:bg-primary-container shadow-sm transition-all inline-flex items-center gap-2 shrink-0" href="mailto:help@askanythinganswers.com">
+<a className="px-5 py-2.5 bg-primary text-on-primary rounded-lg text-label-md font-label-md hover:bg-primary-container shadow-sm transition-all inline-flex items-center gap-2 shrink-0" href="mailto:info@askanythinganswers.com">
 <span>Send Inquiries</span>
 <span className="material-symbols-outlined text-[16px]">send</span>
 </a>
@@ -260,7 +260,7 @@ export default function Privacy() {
 </section>
 
 <div className="pt-6 pb-12 flex flex-col sm:flex-row items-center justify-between text-label-sm font-label-sm text-outline gap-4">
-<p>AskAnythingAnswers Inc. Public Legal Specification • Document ID: EXP-PRIV-2024-V2.4</p>
+<p>TECH-FIN SOLUTIONS LLC • AskAnythingAnswers Privacy Policy • Effective November 11, 2026</p>
 <button type="button" className="hover:text-primary transition-colors flex items-center gap-1" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
 <span>Back to top</span>
 <span className="material-symbols-outlined text-[14px]">arrow_upward</span>

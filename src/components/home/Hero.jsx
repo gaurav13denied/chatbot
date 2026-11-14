@@ -8,7 +8,7 @@ export default function Hero() {
     <section className="relative overflow-hidden border-b border-surface-container py-4 sm:py-5 lg:py-6">
       <div className="absolute inset-0 z-0">
         <Photo
-          alt="Bright, sunlit workspace with a laptop"
+          alt="Customer receiving remote technical assistance"
           className="w-full h-full object-cover object-left md:object-center"
 
           local="/images/hero.jpg"
@@ -52,7 +52,7 @@ export default function Hero() {
                 </span>
               </div>
               <span className="text-[11px] sm:text-xs font-bold text-on-surface">
-                4.9/5 Average rating across 25,000+ helped users
+                Helped 25,000+ users
               </span>
             </div>
             <div className="space-y-2">
@@ -61,14 +61,14 @@ export default function Hero() {
                 Minutes
               </h1>
               <p className="text-xs sm:text-sm text-on-surface-variant max-w-lg font-normal leading-snug">
-                Connect with friendly specialists ready to solve your computer, printer, car, appliance, or
-                phone issues right now. No confusing manuals or endless hold music.
+                Connect with friendly specialists ready to solve your every complex issue right now. No confusing
+                manuals or endless hold music.
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-3.5 text-xs text-on-surface font-semibold pt-0.5">
               <div className="flex items-center gap-1.5">
                 <span className="material-symbols-outlined text-primary text-[18px]">verified</span>
-                <span>100% human specialists</span>
+                <span>100% Real Human Specialists</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <span className="material-symbols-outlined text-primary text-[18px]">bolt</span>
@@ -76,12 +76,12 @@ export default function Hero() {
               </div>
               <div className="flex items-center gap-1.5">
                 <span className="material-symbols-outlined text-primary text-[18px]">lock</span>
-                <span>Private, one-on-one support</span>
+                <span>Private session. Pay only when satisfied</span>
               </div>
             </div>
           </div>
           <div className="lg:col-span-5 relative">
-            {/* Same chat window as the printers page: header, scrolling messages, reply box pinned at the bottom */}
+            {/* Same chat window as the plumbing page: header, scrolling messages, reply box pinned at the bottom */}
             <div
               className="ml-auto flex w-full max-w-lg flex-col overflow-hidden rounded-2xl bg-surface-container-lowest shadow-[0_30px_80px_-30px_rgba(19,27,46,0.45)] ring-1 ring-black/10 lg:h-[min(640px,calc(100vh-11rem))] lg:min-h-[430px]"
               id="quick-match"

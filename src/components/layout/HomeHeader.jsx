@@ -35,7 +35,7 @@ export default function HomeHeader() {
               <span className="material-symbols-outlined text-outline text-[18px] mr-1.5">search</span>
               <input
                 className="w-full bg-transparent border-none p-0 text-xs text-on-surface placeholder:text-outline focus:ring-0 focus:outline-none"
-                placeholder="Search topics or devices..."
+                placeholder="Search your topics..."
                 type="text"
               />
             </div>

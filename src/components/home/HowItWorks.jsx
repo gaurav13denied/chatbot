@@ -13,8 +13,7 @@ export default function HowItWorks() {
           </h2>
           <p className="text-sm sm:text-base text-on-surface-variant mt-2">
             {' '}
-            No technical expertise needed on your part. We keep it as simple and stress-free as talking to a
-            knowledgeable neighbor.{' '}
+            No special knowledge needed. We keep it as simple as talking to a helpful neighbour.{' '}
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
@@ -29,8 +28,7 @@ export default function HowItWorks() {
             </h3>
             <p className="text-sm text-on-surface-variant leading-relaxed">
               {' '}
-              Describe your problem in your own words in a few seconds. Type what you see, hear, or feel that
-              isn't working properly.{' '}
+              Describe your problem in your own words. Type what you see, hear, or need help with.{' '}
             </p>
           </div>
           <div className="bg-surface-container-low rounded-2xl p-8 border border-outline-variant/40 relative">
@@ -44,7 +42,7 @@ export default function HowItWorks() {
             </h3>
             <p className="text-sm text-on-surface-variant leading-relaxed">
               {' '}
-              We pair you directly with a verified specialist who knows your exact brand and issue, so you
+              We pair you directly with a verified specialist who knows your exact problem, so you
               don't repeat yourself.{' '}
             </p>
           </div>
@@ -55,12 +53,11 @@ export default function HowItWorks() {
             </div>
             <h3 className="font-headline-sm text-xl font-bold text-on-surface mb-3">
               {' '}
-              Chat 1-on-1 until it's solved{' '}
+              Agree on the rate and get it done{' '}
             </h3>
             <p className="text-sm text-on-surface-variant leading-relaxed">
               {' '}
-              Talk back and forth via instant chat or phone until your problem is completely fixed.
-              Step-by-step guidance made easy.{' '}
+              Chat one-on-one, confirm the hourly rate, and get the work done. Pay the service charges only if you are satisfied.{' '}
             </p>
           </div>
         </div>

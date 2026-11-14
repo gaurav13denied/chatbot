@@ -13,8 +13,7 @@ export default function Specialists() {
           </h2>
           <p className="text-sm sm:text-base text-on-surface-variant mt-2">
             {' '}
-            We give a detailed background-check of every expert and evaluate them by their peers so you get
-            trusted answers quickly.{' '}
+            Every professional goes through a background check and peer review, so you get reliable help quickly.{' '}
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -28,7 +27,7 @@ export default function Specialists() {
               <span className="absolute bottom-0 right-1 size-3.5 rounded-full bg-emerald-500 border-2 border-white" />
             </div>
             <h3 className="font-headline-sm text-lg font-bold text-on-surface">David M.</h3>
-            <p className="text-xs font-medium text-primary mb-2">Printer & Computer Specialist</p>
+            <p className="text-xs font-medium text-primary mb-2">Plumbing Specialist</p>
             <div className="flex items-center gap-1 mb-3">
               <span
                 className="material-symbols-outlined text-[16px] text-amber-500 fill-1"
@@ -40,7 +39,7 @@ export default function Specialists() {
               <span className="text-xs text-on-surface-variant">(3,420+ ratings)</span>
             </div>
             <p className="text-xs text-on-surface-variant leading-relaxed">
-              Fixes printer connection issues, paper feed errors, and driver problems.
+              Fixes leaks, blocked drains, and tap or pipe faults.
             </p>
           </div>
           <div className="bg-surface-container-lowest rounded-2xl p-6 border border-outline-variant/40 shadow-sm flex flex-col items-center text-center">
@@ -53,7 +52,7 @@ export default function Specialists() {
               <span className="absolute bottom-0 right-1 size-3.5 rounded-full bg-emerald-500 border-2 border-white" />
             </div>
             <h3 className="font-headline-sm text-lg font-bold text-on-surface">Elena R.</h3>
-            <p className="text-xs font-medium text-primary mb-2">Mac & Windows System Expert</p>
+            <p className="text-xs font-medium text-primary mb-2">Housekeeping Specialist</p>
             <div className="flex items-center gap-1 mb-3">
               <span
                 className="material-symbols-outlined text-[16px] text-amber-500 fill-1"
@@ -65,7 +64,7 @@ export default function Specialists() {
               <span className="text-xs text-on-surface-variant">(3,180+ ratings)</span>
             </div>
             <p className="text-xs text-on-surface-variant leading-relaxed">
-              Resolves slow computers, system errors, and software setup.
+              Plans deep cleaning, home organising, and daily upkeep.
             </p>
           </div>
           <div className="bg-surface-container-lowest rounded-2xl p-6 border border-outline-variant/40 shadow-sm flex flex-col items-center text-center">
@@ -78,7 +77,7 @@ export default function Specialists() {
               <span className="absolute bottom-0 right-1 size-3.5 rounded-full bg-emerald-500 border-2 border-white" />
             </div>
             <h3 className="font-headline-sm text-lg font-bold text-on-surface">Maria R.</h3>
-            <p className="text-xs font-medium text-primary mb-2">Car & Vehicle Specialist</p>
+            <p className="text-xs font-medium text-primary mb-2">Maid Services Expert</p>
             <div className="flex items-center gap-1 mb-3">
               <span
                 className="material-symbols-outlined text-[16px] text-amber-500 fill-1"
@@ -90,7 +89,7 @@ export default function Specialists() {
               <span className="text-xs text-on-surface-variant">(2,850+ ratings)</span>
             </div>
             <p className="text-xs text-on-surface-variant leading-relaxed">
-              Diagnoses dashboard warning lights, engine noise, and vehicle electrical issues.
+              Finds reliable domestic help for daily and weekly work.
             </p>
           </div>
           <div className="bg-surface-container-lowest rounded-2xl p-6 border border-outline-variant/40 shadow-sm flex flex-col items-center text-center">
@@ -103,7 +102,7 @@ export default function Specialists() {
               <span className="absolute bottom-0 right-1 size-3.5 rounded-full bg-emerald-500 border-2 border-white" />
             </div>
             <h3 className="font-headline-sm text-lg font-bold text-on-surface">Sarah C.</h3>
-            <p className="text-xs font-medium text-primary mb-2">Smart Home & Devices Specialist</p>
+            <p className="text-xs font-medium text-primary mb-2">Property Lawyer</p>
             <div className="flex items-center gap-1 mb-3">
               <span
                 className="material-symbols-outlined text-[16px] text-amber-500 fill-1"
@@ -115,7 +114,7 @@ export default function Specialists() {
               <span className="text-xs text-on-surface-variant">(1,920+ ratings)</span>
             </div>
             <p className="text-xs text-on-surface-variant leading-relaxed">
-              Fixes smart TVs, tablets, phone sync, and home audio connections.
+              Reviews rental agreements, sale papers, and ownership disputes.
             </p>
           </div>
           <div className="bg-surface-container-lowest rounded-2xl p-6 border border-outline-variant/40 shadow-sm flex flex-col items-center text-center">
@@ -153,7 +152,7 @@ export default function Specialists() {
               <span className="absolute bottom-0 right-1 size-3.5 rounded-full bg-emerald-500 border-2 border-white" />
             </div>
             <h3 className="font-headline-sm text-lg font-bold text-on-surface">Marcus B.</h3>
-            <p className="text-xs font-medium text-primary mb-2">Wi-Fi & Internet Expert</p>
+            <p className="text-xs font-medium text-primary mb-2">Home Appliance Expert</p>
             <div className="flex items-center gap-1 mb-3">
               <span
                 className="material-symbols-outlined text-[16px] text-amber-500 fill-1"
@@ -165,7 +164,7 @@ export default function Specialists() {
               <span className="text-xs text-on-surface-variant">(2,410+ ratings)</span>
             </div>
             <p className="text-xs text-on-surface-variant leading-relaxed">
-              Solves dropped Wi-Fi signals, router setups, and network dead zones.
+              Fixes washing machines, refrigerators, and everyday appliance faults.
             </p>
           </div>
         </div>

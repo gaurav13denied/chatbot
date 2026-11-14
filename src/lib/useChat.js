@@ -5,7 +5,7 @@ const API = import.meta.env.VITE_API_URL || '';
 const KEY = 'aaa_chat_session';
 
 const GREETING =
-  'Hello! I am reviewing live questions right now. Tell me what is happening with your device, or pick an issue below to start directly.';
+  'Hello! I am reviewing live requests right now. Tell me what you need, or pick a service below to start.';
 
 const readStored = () => {
   try {

@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import InnerHeader from './InnerHeader.jsx';
 import InnerFooter from './InnerFooter.jsx';
 
-// Shell shared by the printers, contact, privacy and terms pages (fixed header + footer).
+// Shell shared by the plumbing, contact and policy pages (fixed header + footer).
 export default function InnerLayout({ active, children }) {
   // The inner pages of the design use smooth anchor scrolling, no overscroll bounce and the body-md font
   useEffect(() => {

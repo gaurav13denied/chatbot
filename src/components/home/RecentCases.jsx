@@ -10,12 +10,12 @@ export default function RecentCases() {
             </div>
             <h2 className="font-headline-lg text-3xl sm:text-4xl text-on-surface font-normal">
               {' '}
-              Real Troubleshooting Cases Solved Today{' '}
+              Real Struggles Managed Today{' '}
             </h2>
           </div>
           <p className="text-sm text-on-surface-variant max-w-sm">
             {' '}
-            See what everyday problems our specialists tackled and solved within minutes.{' '}
+            See what everyday problems our professionals tackled and solved within minutes.{' '}
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -23,16 +23,15 @@ export default function RecentCases() {
             <div>
               <div className="flex items-center justify-between gap-3 mb-4">
                 <span className="px-3 py-1 rounded-full bg-surface-container text-xs font-semibold text-primary">
-                  Printers & Hardware
+                  Plumbing
                 </span>
                 <span className="text-xs text-on-surface-variant">Solved in 8 minutes</span>
               </div>
               <h3 className="font-headline-sm text-base font-bold text-on-surface mb-2">
-                "HP DeskJet showed 'Printer Offline' right before an urgent boarding pass printing."
+                "Kitchen tap leaking badly before guests arrived."
               </h3>
               <p className="text-xs sm:text-sm text-on-surface-variant mb-6 leading-relaxed">
-                Guided the user through clearing the stuck print queue and reconnecting to the Wi-Fi network.
-                The printer responded and printed right away.
+                Plumber identified a worn washer, replaced it on the same visit, and the leak stopped.
               </p>
             </div>
             <div className="pt-4 border-t border-surface-container flex items-center justify-between">
@@ -44,7 +43,7 @@ export default function RecentCases() {
                 />
                 <div>
                   <p className="text-xs font-bold text-on-surface">Solved by David M.</p>
-                  <p className="text-[11px] text-on-surface-variant">Printer & Computer Specialist</p>
+                  <p className="text-[11px] text-on-surface-variant">Plumbing Specialist</p>
                 </div>
               </div>
               <div className="flex text-amber-500 text-xs">★★★★★</div>
@@ -54,16 +53,15 @@ export default function RecentCases() {
             <div>
               <div className="flex items-center justify-between gap-3 mb-4">
                 <span className="px-3 py-1 rounded-full bg-surface-container text-xs font-semibold text-primary">
-                  Mac & Software
+                  Housekeeping
                 </span>
                 <span className="text-xs text-on-surface-variant">Solved in 11 minutes</span>
               </div>
               <h3 className="font-headline-sm text-base font-bold text-on-surface mb-2">
-                "MacBook froze with spinning color wheel after updating macOS."
+                "Needed full home cleaning before festivals."
               </h3>
               <p className="text-xs sm:text-sm text-on-surface-variant mb-6 leading-relaxed">
-                Walked through restarting in Safe Mode, finding a stuck startup app that was freezing the
-                computer, and safely removing it.
+                Housekeeper arranged a team and a room-by-room plan, finishing in one day.
               </p>
             </div>
             <div className="pt-4 border-t border-surface-container flex items-center justify-between">
@@ -75,7 +73,7 @@ export default function RecentCases() {
                 />
                 <div>
                   <p className="text-xs font-bold text-on-surface">Solved by Elena R.</p>
-                  <p className="text-[11px] text-on-surface-variant">Mac & Windows System Expert</p>
+                  <p className="text-[11px] text-on-surface-variant">Housekeeping Expert</p>
                 </div>
               </div>
               <div className="flex text-amber-500 text-xs">★★★★★</div>
@@ -85,16 +83,15 @@ export default function RecentCases() {
             <div>
               <div className="flex items-center justify-between gap-3 mb-4">
                 <span className="px-3 py-1 rounded-full bg-surface-container text-xs font-semibold text-primary">
-                  Automotive
+                  Maid Services
                 </span>
                 <span className="text-xs text-on-surface-variant">Solved in 14 minutes</span>
               </div>
               <h3 className="font-headline-sm text-base font-bold text-on-surface mb-2">
-                "Honda dashboard flickered with brake and battery light while starting."
+                "Our maid left suddenly and we needed a replacement."
               </h3>
               <p className="text-xs sm:text-sm text-on-surface-variant mb-6 leading-relaxed">
-                Identified signs of low battery voltage rather than brake failure, instructed user to tighten
-                the cable terminal, safely starting the car without a tow.
+                A verified maid was matched for daily morning work within the same day.
               </p>
             </div>
             <div className="pt-4 border-t border-surface-container flex items-center justify-between">
@@ -106,7 +103,7 @@ export default function RecentCases() {
                 />
                 <div>
                   <p className="text-xs font-bold text-on-surface">Solved by Maria R.</p>
-                  <p className="text-[11px] text-on-surface-variant">Car & Vehicle Specialist</p>
+                  <p className="text-[11px] text-on-surface-variant">Maid Services Expert</p>
                 </div>
               </div>
               <div className="flex text-amber-500 text-xs">★★★★★</div>
@@ -116,28 +113,27 @@ export default function RecentCases() {
             <div>
               <div className="flex items-center justify-between gap-3 mb-4">
                 <span className="px-3 py-1 rounded-full bg-surface-container text-xs font-semibold text-primary">
-                  Home Internet
+                  Legal
                 </span>
                 <span className="text-xs text-on-surface-variant">Solved in 9 minutes</span>
               </div>
               <h3 className="font-headline-sm text-base font-bold text-on-surface mb-2">
-                "Wi-Fi keeps disconnecting on tablets and phones upstairs in the evening."
+                "Landlord refused to return my security deposit."
               </h3>
               <p className="text-xs sm:text-sm text-on-surface-variant mb-6 leading-relaxed">
-                Helped user separate their 2.4GHz and 5GHz Wi-Fi network names so mobile devices stopped
-                jumping between bands.
+                Lawyer reviewed the agreement and drafted a formal notice for the landlord.
               </p>
             </div>
             <div className="pt-4 border-t border-surface-container flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <Photo
-                  alt="Marcus B."
+                  alt="Sarah C."
                   className="size-10 rounded-full object-cover border border-outline-variant"
-                  local="/images/marcus-b.jpg"
+                  local="/images/sarah-c.jpg"
                 />
                 <div>
-                  <p className="text-xs font-bold text-on-surface">Solved by Marcus B.</p>
-                  <p className="text-[11px] text-on-surface-variant">Wi-Fi & Internet Expert</p>
+                  <p className="text-xs font-bold text-on-surface">Solved by Sarah C.</p>
+                  <p className="text-[11px] text-on-surface-variant">Property Lawyer</p>
                 </div>
               </div>
               <div className="flex text-amber-500 text-xs">★★★★★</div>

@@ -45,13 +45,13 @@ export default function InnerHeader({ active }) {
               <span className="material-symbols-outlined text-outline text-[18px] mr-1.5">search</span>
               <input
                 className="w-full bg-transparent border-none p-0 text-xs text-on-surface placeholder:text-outline focus:ring-0 focus:outline-none"
-                placeholder="Search topics or devices..."
+                placeholder="Search your topics..."
                 type="text"
               />
             </div>
             <Link
               className="inline-flex items-center justify-center rounded-lg px-3.5 py-1.5 bg-primary text-on-primary font-bold text-xs shadow-sm hover:bg-primary-container transition-all"
-              to="/category/printers#quick-match"
+              to="/category/plumbing#quick-match"
             >
               Ask an Expert
             </Link>

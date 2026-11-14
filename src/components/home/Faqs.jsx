@@ -10,7 +10,7 @@ export default function Faqs() {
           </h2>
           <p className="text-sm text-on-surface-variant mt-2">
             {' '}
-            Everything you need to know about getting help from our friendly specialists.{' '}
+            Everything you need to know about getting help from our professionals.{' '}
           </p>
         </div>
         <div className="space-y-4">
@@ -39,25 +39,22 @@ export default function Faqs() {
           </div>
           <div className="rounded-xl border border-outline-variant/40 bg-surface-container-low p-5">
             <h3 className="font-headline-sm text-base font-bold text-on-surface flex items-center justify-between">
-              <span>What kind of devices and problems can you help with?</span>
+              <span>What services can I book?</span>
               <span className="material-symbols-outlined text-primary text-[20px]">expand_more</span>
             </h3>
             <p className="mt-2.5 text-xs sm:text-sm text-on-surface-variant leading-relaxed">
               {' '}
-              Our specialists support thousands of brands and products, including laptops, desktop computers,
-              mobile phones, printers, home appliances, automotive diagnostics, smart TVs, and home internet
-              routers. If it has buttons, wires, or an engine, we have an expert who knows it.{' '}
+              We cover plumbing, maid services, housekeeping, and legal advice. If you are unsure which one fits, describe the problem and we will point you to the right expert.{' '}
             </p>
           </div>
           <div className="rounded-xl border border-outline-variant/40 bg-surface-container-low p-5">
             <h3 className="font-headline-sm text-base font-bold text-on-surface flex items-center justify-between">
-              <span>Can an expert guide me over phone or text chat?</span>
+              <span>How much does it cost?</span>
               <span className="material-symbols-outlined text-primary text-[20px]">expand_more</span>
             </h3>
             <p className="mt-2.5 text-xs sm:text-sm text-on-surface-variant leading-relaxed">
               {' '}
-              You can communicate whichever way you feel most comfortable! Type in our live text chat, send
-              photos of error messages, or request a clear phone call for direct verbal instructions.{' '}
+              Professionals charge by the hour, based on the service. The hourly rate is shared before you book. A 10% service fee is added <i>(terms and conditions apply)</i> to the overall bill. It is shown upfront, with no hidden charges.{' '}
             </p>
           </div>
         </div>

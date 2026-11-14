@@ -9,7 +9,7 @@ export default function Contact() {
 
   // "Reconnect Now": preselect the follow-up category and jump to the form
   function reconnect() {
-    setCategory('Follow up on a recent troubleshooting session');
+    setCategory('Follow up on a recent session');
     document.getElementById('contact-form-section')?.scrollIntoView({ behavior: 'smooth' });
   }
 
@@ -90,7 +90,7 @@ export default function Contact() {
           <div className="bg-surface-container-lowest rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
             <div>
               <div className="size-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                <span className="material-symbols-outlined text-[26px]">chat</span>
+                <span className="material-symbols-outlined text-[26px]">chat_spark</span>
               </div>
               <div className="flex items-center justify-between mb-2">
                 <h3 className="font-headline-sm text-headline-sm text-on-surface">Live Expert Chat</h3>
@@ -100,8 +100,8 @@ export default function Contact() {
               </div>
               <p className="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
                 {' '}
-                Instant private connection with a specialist in under 90 seconds for immediate device and tech
-                troubleshooting.{' '}
+                Private chat with a verified professional in under 90 seconds for plumbing, cleaning, home help,
+                or legal questions.{' '}
               </p>
             </div>
             <div>
@@ -112,35 +112,6 @@ export default function Contact() {
                 <span>Start Live Chat</span>
                 <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
               </Link>
-            </div>
-          </div>
-          <div className="bg-surface-container-lowest rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
-            <div>
-              <div className="size-12 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                <span className="material-symbols-outlined text-[26px]">mark_email_unread</span>
-              </div>
-              <div className="flex items-center justify-between mb-2">
-                <h3 className="font-headline-sm text-headline-sm text-on-surface">
-                  Message Our Support Desk
-                </h3>
-                <span className="px-2 py-0.5 rounded text-[11px] font-bold tracking-wide uppercase bg-secondary-fixed text-on-secondary-fixed">
-                  Desk
-                </span>
-              </div>
-              <p className="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
-                {' '}
-                For account assistance, past session transcripts, specialist pairing questions, or general
-                inquiries. Response within 2 hours.{' '}
-              </p>
-            </div>
-            <div>
-              <a
-                className="inline-flex items-center gap-2 text-secondary font-label-lg text-label-lg group-hover:gap-3 transition-all"
-                href="#contact-form-section"
-              >
-                <span>Submit a Ticket</span>
-                <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-              </a>
             </div>
           </div>
           <div className="bg-surface-container-lowest rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
@@ -156,8 +127,8 @@ export default function Contact() {
               </div>
               <p className="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
                 {' '}
-                Looking to follow up with David M., Elena R., or your previous specialist? Enter your previous
-                session ID to resume.{' '}
+                Want to follow up with David M., Elena R., or another professional you worked with? Enter your
+                previous session ID to resume.{' '}
               </p>
             </div>
             <div>
@@ -185,8 +156,7 @@ export default function Contact() {
               </h2>
               <p className="font-body-sm text-body-sm text-on-surface-variant mt-1.5">
                 {' '}
-                Fill out the details below and an on-duty specialist or customer experts will get back to you
-                promptly.{' '}
+                Fill in the details below and our support team will reply promptly.{' '}
               </p>
             </div>
             <form ref={formRef} className="space-y-6" id="helpDeskForm" onSubmit={handleSubmit}>
@@ -261,8 +231,8 @@ export default function Contact() {
                         <option value="I need help connecting with an expert">
                           I need help connecting with an expert
                         </option>
-                        <option value="Follow up on a recent troubleshooting session">
-                          Follow up on a recent troubleshooting session
+                        <option value="Follow up on a recent session">
+                          Follow up on a recent session
                         </option>
                         <option value="Feedback on a specialist">Feedback on a specialist</option>
                         <option value="Website or technical question">Website or technical question</option>
@@ -279,7 +249,7 @@ export default function Contact() {
                       htmlFor="deviceTopic"
                     >
                       {' '}
-                      Topic or Device Involved{' '}
+                      Topic Involved{' '}
                       <span className="text-on-surface-variant text-xs font-normal">(Optional)</span>
                     </label>
                     <div className="relative">
@@ -289,7 +259,7 @@ export default function Contact() {
                       <input
                         className="w-full bg-surface-container-low text-on-surface placeholder:text-outline rounded-lg pl-11 pr-4 py-3 text-body-md font-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all shadow-sm"
                         id="deviceTopic"
-                        placeholder="e.g. HP OfficeJet, MacBook Air, Toyota Civic"
+                        placeholder="e.g. Leaking kitchen tap, rental agreement"
                         type="text"
                       />
                     </div>
@@ -308,7 +278,7 @@ export default function Contact() {
                   <textarea
                     className="w-full bg-surface-container-low text-on-surface placeholder:text-outline rounded-lg p-4 text-body-md font-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary focus:outline-none transition-all resize-y shadow-sm"
                     id="userMessage"
-                    placeholder="Please describe how we can assist you in plain words..."
+                    placeholder="Please describe how we can help you in plain words. Mention your location and timing if relevant."
                     required
                     rows="5"
                   />
@@ -381,8 +351,8 @@ export default function Contact() {
               </div>
               <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
                 {' '}
-                Our network of vetted technical, device, and home specialists operates across all time zones to
-                guarantee you never get stuck.{' '}
+                Our network of vetted plumbers, maids, housekeepers, and lawyers is reachable across time zones, so
+                you are never left waiting.{' '}
               </p>
               <div className="bg-surface-container-low rounded-lg p-3 text-xs flex items-center justify-between text-on-surface font-medium">
                 <span className="flex items-center gap-1.5">
@@ -401,18 +371,18 @@ export default function Contact() {
                     Direct Email
                   </span>
                   <h4 className="font-headline-sm text-base sm:text-[1.05rem] font-bold text-on-surface select-all [overflow-wrap:anywhere]">
-                    support@askanythinganswers.com
+                    info@askanythinganswers.com
                   </h4>
                 </div>
               </div>
               <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
                 {' '}
-                Prefer email clients? Write directly to our management desk. Please include photos or screenshots
-                if applicable.{' '}
+                Prefer email clients? Write directly to our management desk. Please include photos of the issue or
+                relevant documents if applicable.{' '}
               </p>
               <a
                 className="w-full inline-flex items-center justify-center gap-2 rounded-lg py-2.5 px-4 bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-colors"
-                href="mailto:support@askanythinganswers.com"
+                href="mailto:info@askanythinganswers.com"
               >
                 <span className="material-symbols-outlined text-[16px]">outgoing_mail</span>
                 <span>Open in Mail Client</span>
@@ -451,28 +421,12 @@ export default function Contact() {
             </div>
             <div className="bg-primary text-on-primary rounded-xl p-6 shadow-lg relative overflow-hidden space-y-3">
               <div className="flex items-center gap-2 text-primary-fixed font-label-sm text-label-sm uppercase tracking-wider">
-                <span className="material-symbols-outlined text-[16px]">verified</span> Safe Advisory
-                Pledge{' '}
+                <span className="material-symbols-outlined text-[16px]">verified</span> Registered Office
               </div>
-              <h4 className="font-headline-sm text-headline-sm">Community Guidelines & Safety Promise</h4>
+              <h4 className="font-headline-sm text-headline-sm">TECH-FIN SOLUTIONS LLC</h4>
               <p className="font-body-sm text-body-sm text-on-primary-container leading-relaxed">
-                {' '}
-                All specialists undergo thorough credential vetting, identity checks, and peer reviews to
-                provide dependable, respectful, and safe guidance every single time.{' '}
+                3 Germay Dr, Ste 4 1983, Wilmington, DE 19804
               </p>
-              <div className="pt-2 flex items-center gap-3">
-                <img
-                  className="size-10 rounded-full object-cover shadow-sm ring-2 ring-primary-fixed"
-                  src="/images/contact-safety-desk.jpg"
-                  alt="Quality & Safety Desk specialist"
-                />
-                <div>
-                  <p className="font-label-md text-label-md text-white font-semibold">
-                    Quality & Safety Desk
-                  </p>
-                  <p className="text-xs text-primary-fixed-dim">Supervised human advisory</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -485,13 +439,11 @@ export default function Contact() {
                 Behind Our Help Desk
               </span>
               <h3 className="font-headline-lg text-headline-lg text-on-surface">
-                Real Specialists Who Care About Your Peace of Mind
+                People Who Care About Your Peace of Mind
               </h3>
               <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                {' '}
-                When you contact AskAnythingAnswers, you aren’t routed through automated dead-ends. Our dispatch
-                coordinators are hands-on engineers and technology veterans who review every pairing
-                personally when nuanced help is needed.{' '}
+                When you contact AskAnythingAnswers, you are not sent through automated dead ends. Our
+                coordinators review pairings by hand when a request needs a closer look.
               </p>
               <div className="grid grid-cols-3 gap-2 sm:gap-4 pt-2">
                 <div className="bg-surface-container-lowest rounded-lg px-1.5 py-3 sm:p-3 text-center min-w-0">
@@ -502,12 +454,12 @@ export default function Contact() {
                 </div>
                 <div className="bg-surface-container-lowest rounded-lg px-1.5 py-3 sm:p-3 text-center min-w-0">
                   <span className="block font-headline-sm text-[1.0625rem] max-[359px]:text-[0.9375rem] sm:text-headline-sm font-semibold text-primary">12,000+</span>{' '}
-                  <span className="font-body-sm text-[11px] sm:text-[12px] leading-snug text-on-surface-variant">Daily resolutions</span>
+                  <span className="font-body-sm text-[11px] sm:text-[12px] leading-snug text-on-surface-variant">Requests handled daily</span>
                 </div>
                 <div className="bg-surface-container-lowest rounded-lg px-1.5 py-3 sm:p-3 text-center min-w-0">
                   <span className="block font-headline-sm text-[1.0625rem] max-[359px]:text-[0.9375rem] sm:text-headline-sm font-semibold text-primary">{'<'}90s</span>{' '}
                   <span className="font-body-sm text-[11px] sm:text-[12px] leading-snug text-on-surface-variant">
-                    Average pairing speed
+                    Average Pairing Speed
                   </span>
                 </div>
               </div>
@@ -565,7 +517,7 @@ export default function Contact() {
               {' '}
               Our online help desk monitors incoming tickets around the clock. For standard inquiries
               submitted through the contact form, average response times range from 15 minutes to under two
-              hours. If you are facing an urgent device crisis, we recommend using the “Start Live Chat”
+              hours. If you are facing an urgent problem, such as a burst pipe, we recommend using the “Start Live Chat”
               option for immediate matching in under 90 seconds.{' '}
             </div>
           </div>
@@ -589,11 +541,8 @@ export default function Contact() {
               className={`${openFaq === 2 ? '' : 'hidden '}px-6 pb-6 pt-1 font-body-md text-body-md text-on-surface-variant leading-relaxed`}
               id="faq-ans-2"
             >
-              {' '}
-              Absolutely. You can select “Follow up on a recent troubleshooting session” on the inquiry form
-              or input your specialist’s name or session reference ID. If they are currently active online, we
-              can patch you straight back into their personal room. If they are offline, we can schedule a
-              reconnection or hold your transcript for their review.{' '}
+              Yes. Enter your previous session ID in the Reconnect card, or mention the professional’s name in
+              your message, and we will connect you where they are available.
             </div>
           </div>
           <div className="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all duration-200">
@@ -603,7 +552,7 @@ export default function Contact() {
               onClick={() => toggleFaq(3)}
             >
               <span className="font-headline-sm text-headline-sm text-on-surface pr-4">
-                How do I access notes or steps from my past conversation?
+                How much does it cost?
               </span>
               <span
                 className={`material-symbols-outlined text-outline transition-transform duration-200${openFaq === 3 ? ' rotate-180' : ''}`}
@@ -616,11 +565,12 @@ export default function Contact() {
               className={`${openFaq === 3 ? '' : 'hidden '}px-6 pb-6 pt-1 font-body-md text-body-md text-on-surface-variant leading-relaxed`}
               id="faq-ans-3"
             >
-              {' '}
-              Following every advisory dialogue, an organized summary of recommendations, commands, or
-              troubleshooting steps is archived to your reference email. If you misplaced this email, simply
-              message our desk with the email address you used and we will re-send the full transcript to your
-              inbox immediately.{' '}
+              Professionals charge by the hour, based on the service. A 10% service fee applies to the overall
+              bill, and applicable taxes and fees apply as per our{' '}
+              <Link className="text-primary font-semibold hover:underline" to="/terms">
+                Terms of Service
+              </Link>
+              . You pay offline, only after the work is done.
             </div>
           </div>
           <div className="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden transition-all duration-200">
@@ -645,7 +595,7 @@ export default function Contact() {
             >
               {' '}
               We stand firmly behind our promise of real human assistance. If your challenge required
-              additional diagnostics or hardware inspections that were not concluded in your initial chat, our
+              additional checks or a site visit that were not concluded in your initial chat, our
               support desk will gladly pair you with a senior specialist in that specific niche at no
               additional hurdle until you have clear next steps.{' '}
             </div>
@@ -664,12 +614,12 @@ export default function Contact() {
               </div>
               <h2 className="font-headline-lg text-headline-lg font-bold tracking-tight">
                 {' '}
-                Ready to troubleshoot right now?{' '}
+                Ready to get help right now?{' '}
               </h2>
               <p className="font-body-lg text-body-lg text-on-primary-container leading-relaxed">
                 {' '}
                 Skip the email queue and connect directly with an active specialist online. Verified experts
-                are standing by across printers, computers, smart tech, and automotive issues.{' '}
+                are standing by across plumbing, maid services, housekeeping, home appliances, and legal queries.{' '}
               </p>
             </div>
             <div className="shrink-0 flex flex-col sm:flex-row gap-4 items-center">
