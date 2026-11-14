@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Logo from './Logo.jsx';
 
 const linkClass = 'hover:text-primary transition-colors';
 
@@ -52,13 +53,7 @@ export default function SiteFooter() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="md:col-span-1 space-y-3">
-            <img
-              src="/images/logo.png"
-              alt="AskAnythingAnswers"
-              width="296"
-              height="57"
-              className="h-12 w-auto"
-            />
+            <Logo variant="footer" linked={false} />
             <p className="text-xs text-on-surface-variant leading-relaxed">
               Friendly, real human expertise when you need fast, dependable answers for your daily problems,
               from simple leakages to legal queries.

@@ -38,7 +38,7 @@ export default function RecentCases() {
               <div className="flex items-center gap-3">
                 <Photo
                   alt="David M."
-                  className="size-10 rounded-full object-cover border border-outline-variant"
+                  className="size-10 rounded-full object-cover border border-outline-variant"
                   local="/images/david-m.jpg"
                 />
                 <div>
@@ -68,7 +68,7 @@ export default function RecentCases() {
               <div className="flex items-center gap-3">
                 <Photo
                   alt="Elena R."
-                  className="size-10 rounded-full object-cover border border-outline-variant"
+                  className="size-10 rounded-full object-cover border border-outline-variant"
                   local="/images/elena-r.jpg"
                 />
                 <div>
@@ -98,7 +98,7 @@ export default function RecentCases() {
               <div className="flex items-center gap-3">
                 <Photo
                   alt="Maria R."
-                  className="size-10 rounded-full object-cover border border-outline-variant"
+                  className="size-10 rounded-full object-cover border border-outline-variant"
                   local="/images/maria-r.jpg"
                 />
                 <div>
@@ -127,12 +127,12 @@ export default function RecentCases() {
             <div className="pt-4 border-t border-surface-container flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <Photo
-                  alt="Sarah C."
-                  className="size-10 rounded-full object-cover border border-outline-variant"
-                  local="/images/sarah-c.jpg"
+                  alt="Marcus B."
+                  className="size-10 rounded-full object-cover border border-outline-variant"
+                  local="/images/marcus-b.jpg"
                 />
                 <div>
-                  <p className="text-xs font-bold text-on-surface">Solved by Sarah C.</p>
+                  <p className="text-xs font-bold text-on-surface">Solved by Marcus B.</p>
                   <p className="text-[11px] text-on-surface-variant">Property Lawyer</p>
                 </div>
               </div>
