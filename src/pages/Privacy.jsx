@@ -40,11 +40,6 @@ export default function Privacy() {
 <h1 className="font-display-lg text-display-lg text-on-surface tracking-tight leading-none">Privacy Policy</h1>
 
 </div>
-<div className="flex flex-wrap lg:flex-col items-start lg:items-end gap-3 text-on-surface-variant text-label-md font-label-md bg-surface-container-low p-4 rounded-lg">
-<div className="flex items-center gap-2">
-<span className="material-symbols-outlined text-[18px] text-primary">calendar_today</span>
-<span>Effective: <strong className="text-on-surface">November 11, 2026</strong></span>
-</div>
 </div>
 </div>
 </div>
