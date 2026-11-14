@@ -1,7 +1,8 @@
-import { useEffect, useRef, useState } from 'react';
+import { Fragment, useEffect, useRef, useState } from 'react';
 import { ASK_EVENT } from '../../lib/askChat.js';
 import { useChatContext } from '../../lib/ChatContext.jsx';
 import useIsMobile from '../../lib/useIsMobile.js';
+import leadPosition from '../../lib/leadPosition.js';
 
 const CHIPS = [
   'Leaking tap or pipe',
@@ -94,53 +95,6 @@ export default function ChatPanel({
   const bubble = large ? 'text-sm px-4 py-2.5' : 'text-xs px-3 py-1.5';
   const avatar = large ? 'size-8 mt-0.5 text-xs' : 'size-6 mt-0.5 text-[10px]';
 
-  const list = (
-    <>
-      {messages.map((m, i) =>
-        m.role === 'assistant' ? (
-          <div key={i} className="flex items-start gap-2.5">
-            <Avatar name={persona} className={avatar} />
-            <div className="min-w-0">
-              <p className={`font-bold text-primary mb-1 ${large ? 'text-xs' : 'text-[10px]'}`}>{persona || 'Support Specialist'}</p>
-              <div className={`bg-surface-container rounded-xl rounded-tl-sm text-on-surface leading-snug ${bubble}`}>
-                <p>{m.content}</p>
-              </div>
-            </div>
-          </div>
-        ) : (
-          <div key={i} className="flex justify-end">
-            <div
-              className={`bg-primary text-on-primary rounded-xl rounded-tr-sm leading-snug max-w-[85%] whitespace-pre-wrap break-words ${bubble}`}
-            >
-              {m.content}
-            </div>
-          </div>
-        ),
-      )}
-      {typing && (
-        <div className="flex items-start gap-2.5">
-          <Avatar name={persona} className={avatar} />
-          <div className="min-w-0">
-            <p className={`font-bold text-primary mb-1 ${large ? 'text-xs' : 'text-[10px]'}`}>{persona || 'Support Specialist'}</p>
-            <div
-              className="bg-surface-container rounded-xl rounded-tl-sm px-3 py-2.5 flex items-center gap-1 w-fit"
-              role="status"
-              aria-label={`${persona || 'Specialist'} is typing`}
-            >
-              {[0, 150, 300].map((d) => (
-                <span
-                  key={d}
-                  className="size-1.5 rounded-full bg-on-surface-variant/60 animate-bounce"
-                  style={{ animationDelay: `${d}ms` }}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
-    </>
-  );
-
   // Shown once name, email and phone are shared: the details, a thank-you, and when to expect the call
   const thanks = lead && (
     <div className="rounded-xl border border-primary/30 bg-primary-fixed/30 p-4 text-on-surface" role="status">
@@ -166,6 +120,60 @@ export default function ChatPanel({
         Thank you for sharing your details. A specialist will connect with you in the next few minutes.
       </p>
     </div>
+  );
+
+  // The card stays where the details were given; messages after it (e.g. the visitor coming back later) follow below.
+  // -1 = position unknown, then it is shown after the last message.
+  const leadAt = leadPosition(messages, lead);
+
+  const list = (
+    <>
+      {messages.map((m, i) => (
+        <Fragment key={i}>
+        {m.role === 'assistant' ? (
+          <div key={i} className="flex items-start gap-2.5">
+            <Avatar name={persona} className={avatar} />
+            <div className="min-w-0">
+              <p className={`font-bold text-primary mb-1 ${large ? 'text-xs' : 'text-[10px]'}`}>{persona || 'Support Specialist'}</p>
+              <div className={`bg-surface-container rounded-xl rounded-tl-sm text-on-surface leading-snug ${bubble}`}>
+                <p>{m.content}</p>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div key={i} className="flex justify-end">
+            <div
+              className={`bg-primary text-on-primary rounded-xl rounded-tr-sm leading-snug max-w-[85%] whitespace-pre-wrap break-words ${bubble}`}
+            >
+              {m.content}
+            </div>
+          </div>
+        )}
+        {i === leadAt && thanks}
+        </Fragment>
+      ))}
+      {typing && (
+        <div className="flex items-start gap-2.5">
+          <Avatar name={persona} className={avatar} />
+          <div className="min-w-0">
+            <p className={`font-bold text-primary mb-1 ${large ? 'text-xs' : 'text-[10px]'}`}>{persona || 'Support Specialist'}</p>
+            <div
+              className="bg-surface-container rounded-xl rounded-tl-sm px-3 py-2.5 flex items-center gap-1 w-fit"
+              role="status"
+              aria-label={`${persona || 'Specialist'} is typing`}
+            >
+              {[0, 150, 300].map((d) => (
+                <span
+                  key={d}
+                  className="size-1.5 rounded-full bg-on-surface-variant/60 animate-bounce"
+                  style={{ animationDelay: `${d}ms` }}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 
   const starters = !started && (
@@ -247,7 +255,7 @@ export default function ChatPanel({
       <div className="flex min-h-0 flex-1 flex-col gap-3">
         <div ref={listRef} aria-live="polite" className={`chat-scroll chat-scroll-fade min-h-0 flex-1 space-y-4 overflow-y-auto py-3 pr-1.5 ${fill ? '' : 'max-h-[420px] lg:max-h-none'}`}>
           {list}
-          {thanks}
+          {leadAt < 0 && thanks}
           {starters}
         </div>
         <div className="shrink-0 space-y-3 border-t border-surface-container pt-3">
@@ -266,7 +274,7 @@ export default function ChatPanel({
         className={`chat-scroll space-y-2.5 overflow-y-auto pr-1 ${large ? 'max-h-[360px] min-h-[90px] space-y-4' : 'max-h-[210px]'}`}
       >
         {list}
-        {thanks}
+        {leadAt < 0 && thanks}
       </div>
       {starters}
       {form}
