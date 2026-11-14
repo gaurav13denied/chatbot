@@ -260,7 +260,7 @@ export default function Privacy() {
 </section>
 
 <div className="pt-6 pb-12 flex flex-col sm:flex-row items-center justify-between text-label-sm font-label-sm text-outline gap-4">
-<p>TECH-FIN SOLUTIONS LLC • AskAnythingAnswers Privacy Policy • Effective November 11, 2026</p>
+<p>TECH-FIN SOLUTIONS LLC • AskAnythingAnswers Privacy Policy</p>
 <button type="button" className="hover:text-primary transition-colors flex items-center gap-1" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
 <span>Back to top</span>
 <span className="material-symbols-outlined text-[14px]">arrow_upward</span>
