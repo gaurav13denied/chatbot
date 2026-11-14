@@ -27,7 +27,7 @@ const HELP = [
   { label: 'Cookies Policy', to: '/cookies' },
   { label: 'Refund Policy', to: '/refund-policy' },
   { label: 'Cancellation Policy', to: '/cancellation-policy' },
-  { label: 'Taxes & Fees (10% Service Fee)', to: '/taxes-and-fees' },
+  { label: 'Taxes & Fees', to: '/taxes-and-fees' },
 ];
 
 function Column({ title, items }) {
