@@ -178,6 +178,11 @@ export default function Plumbing() {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-8 lg:pb-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-0 gap-x-10 lg:gap-10 items-center">
             <div className="contents lg:flex lg:col-span-7 lg:flex-col lg:pt-2">
+              <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-surface-container-lowest border border-outline-variant/40 text-on-surface w-fit max-w-full mb-5 shadow-sm order-1 lg:order-none">
+                <span className="font-label-md text-label-md font-bold tracking-tight">
+                  8,400+ plumbing questions resolved
+                </span>
+              </div>
               <h1 className="font-headline-lg text-headline-lg lg:text-display-lg text-on-surface tracking-tight font-medium mb-5 leading-tight order-2 lg:order-none min-[1280px]:max-[1439px]:text-[54px]">
                 Get Instant Help for Any Plumbing Issue
               </h1>
