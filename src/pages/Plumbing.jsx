@@ -1,6 +1,6 @@
 import Photo from '../components/Photo.jsx';
 import { Link } from 'react-router-dom';
-import useChat from '../lib/useChat.js';
+import { useChatContext } from '../lib/ChatContext.jsx';
 import ChatWindow from '../components/home/ChatWindow.jsx';
 
 // Starter chips that fill the intake box
@@ -140,7 +140,7 @@ const FAQS = [
 ];
 
 export default function Plumbing() {
-  const chat = useChat();
+  const { chat } = useChatContext();
 
   return (
     <div className="flex flex-col w-full">
@@ -216,8 +216,8 @@ export default function Plumbing() {
               </div>
             </div>
             <div className="order-3 lg:order-none lg:col-span-5 lg:self-start scroll-mt-24 mb-8 lg:mb-0" id="quick-match">
-              <div className="flex flex-col overflow-hidden rounded-2xl bg-surface-container-lowest shadow-[0_30px_80px_-30px_rgba(19,27,46,0.45)] ring-1 ring-black/10 lg:h-[min(640px,calc(100vh-11rem))] lg:min-h-[430px]">
-                <ChatWindow chat={chat} chips={QUICK_CHIPS} inputId="plumbing-issue-input" />
+              <div className="flex flex-col overflow-hidden rounded-2xl bg-surface-container-lowest shadow-[0_30px_80px_-30px_rgba(19,27,46,0.45)] ring-1 ring-black/10 max-md:h-[480px] lg:h-[min(640px,calc(100vh-11rem))] lg:min-h-[430px]">
+                <ChatWindow chat={chat} chips={QUICK_CHIPS} inputId="plumbing-issue-input" takeOver />
               </div>
               <div className="mt-4 flex flex-col gap-2 px-1">
                 <div className="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">

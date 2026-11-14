@@ -1,7 +1,7 @@
 import ChatPanel, { Avatar } from './ChatPanel.jsx';
 
 /** The chat itself (header, rating bar, messages, input). Used inside the floating popup and inline in a page. */
-export default function ChatWindow({ chat, chips, inputId, onClose }) {
+export default function ChatWindow({ chat, chips, inputId, onClose, fill = false, takeOver = false }) {
   return (
     <div className="flex min-h-0 flex-1 flex-col">
       <div className="flex items-center justify-between gap-3 bg-[#003733] px-4 py-3.5 text-white">
@@ -51,6 +51,8 @@ export default function ChatWindow({ chat, chips, inputId, onClose }) {
           chat={chat}
           large
           pinned
+          fill={fill}
+          takeOver={takeOver}
           chips={chips}
           inputId={inputId}
           footer={

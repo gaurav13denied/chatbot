@@ -1,9 +1,9 @@
 import Photo from '../Photo.jsx';
-import useChat from '../../lib/useChat.js';
+import { useChatContext } from '../../lib/ChatContext.jsx';
 import ChatWindow from './ChatWindow.jsx';
 
 export default function Hero() {
-  const chat = useChat();
+  const { chat } = useChatContext();
   return (
     <section className="relative overflow-hidden border-b border-surface-container py-4 sm:py-5 lg:py-6">
       <div className="absolute inset-0 z-0">
@@ -49,10 +49,11 @@ export default function Hero() {
           <div className="lg:col-span-5 relative">
             {/* Same chat window as the plumbing page: header, scrolling messages, reply box pinned at the bottom */}
             <div
-              className="ml-auto flex w-full max-w-lg flex-col overflow-hidden rounded-2xl bg-surface-container-lowest shadow-[0_30px_80px_-30px_rgba(19,27,46,0.45)] ring-1 ring-black/10 lg:h-[min(640px,calc(100vh-11rem))] lg:min-h-[430px]"
+              className="ml-auto flex w-full max-w-lg flex-col overflow-hidden rounded-2xl bg-surface-container-lowest shadow-[0_30px_80px_-30px_rgba(19,27,46,0.45)] ring-1 ring-black/10 max-md:h-[480px] lg:h-[min(640px,calc(100vh-11rem))] lg:min-h-[430px]"
               id="quick-match"
             >
-              <ChatWindow chat={chat} />
+              {/* On a phone the box has a fixed height (messages scroll inside it) and chatting opens the full-screen chat */}
+              <ChatWindow chat={chat} takeOver />
             </div>
           </div>
         </div>

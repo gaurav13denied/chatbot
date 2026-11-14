@@ -1,0 +1,2 @@
+# The NestJS server has its own project and its own secrets; the Vercel site is the front end only.
+server

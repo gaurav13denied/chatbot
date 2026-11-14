@@ -33,7 +33,8 @@ async function call(path, body) {
   return res.json();
 }
 
-export default function useChat() {
+// `enabled` false = do not contact the server yet (used on pages that have no chat box until the chat is opened)
+export default function useChat(enabled = true) {
   const [persona, setPersona] = useState('');
   const [messages, setMessages] = useState([{ role: 'assistant', content: GREETING }]);
   const [typing, setTyping] = useState(false);
@@ -53,6 +54,7 @@ export default function useChat() {
   }, []);
 
   useEffect(() => {
+    if (!enabled) return undefined;
     let cancelled = false;
     (async () => {
       try {
@@ -80,7 +82,7 @@ export default function useChat() {
     return () => {
       cancelled = true;
     };
-  }, [begin]);
+  }, [begin, enabled]);
 
   const send = useCallback(
     async (text) => {

@@ -1,5 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import ScrollToHash from './components/ScrollToHash.jsx';
+import MobileChat from './components/MobileChat.jsx';
+import { ChatProvider } from './lib/ChatContext.jsx';
 import InnerLayout from './components/layout/InnerLayout.jsx';
 import Home from './pages/Home.jsx';
 import Plumbing from './pages/Plumbing.jsx';
@@ -16,7 +18,7 @@ const inner = (element, active) => <InnerLayout active={active}>{element}</Inner
 
 export default function App() {
   return (
-    <>
+    <ChatProvider>
       <ScrollToHash />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -35,6 +37,8 @@ export default function App() {
         <Route path="/legal" element={<Navigate to="/privacy" replace />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-    </>
+      {/* Phone only: round chat icon at the bottom right + full-screen chat */}
+      <MobileChat />
+    </ChatProvider>
   );
 }

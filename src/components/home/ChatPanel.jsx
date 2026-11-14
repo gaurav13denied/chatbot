@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { ASK_EVENT } from '../../lib/askChat.js';
+import { useChatContext } from '../../lib/ChatContext.jsx';
+import useIsMobile from '../../lib/useIsMobile.js';
 
 const CHIPS = [
   'Leaking tap or pipe',
@@ -24,9 +26,24 @@ export function Avatar({ name, className = 'size-6 text-[10px]' }) {
  * large:  bigger text and buttons.
  * pinned: fills the height it is given; the messages scroll and the reply box stays at the bottom,
  *         so on a short screen the input is never pushed out of view. `footer` sits under the box.
+ * fill:   the message list uses all the height it is given (no 420px cap), e.g. in the full-screen phone chat.
+ * takeOver: this is a chat box inside a page. On a phone, tapping, typing in or sending from it opens the
+ *         full-screen chat instead, which continues the same conversation.
  */
-export default function ChatPanel({ chat, chips = CHIPS, inputId = 'hero-chat-input', large = false, pinned = false, footer = null }) {
+export default function ChatPanel({
+  chat,
+  chips = CHIPS,
+  inputId = 'hero-chat-input',
+  large = false,
+  pinned = false,
+  fill = false,
+  takeOver = false,
+  footer = null,
+}) {
   const { persona, messages, typing, started, lead, send } = chat;
+  const { openChat } = useChatContext();
+  const isMobile = useIsMobile();
+  const redirect = takeOver && isMobile;
   const [draft, setDraft] = useState('');
   const listRef = useRef(null);
 
@@ -68,7 +85,9 @@ export default function ChatPanel({ chat, chips = CHIPS, inputId = 'hero-chat-in
   function submit(e) {
     e.preventDefault();
     if (!draft.trim() || typing) return;
-    send(draft);
+    // A chat box in the page on a phone: the message is sent from the full-screen chat
+    if (redirect) openChat(draft);
+    else send(draft);
     setDraft('');
   }
 
@@ -159,7 +178,7 @@ export default function ChatPanel({ chat, chips = CHIPS, inputId = 'hero-chat-in
           <button
             key={c}
             type="button"
-            onClick={() => send(c)}
+            onClick={() => (redirect ? openChat(c) : send(c))}
             className={`rounded-lg bg-surface-container-low hover:bg-primary hover:text-white hover:border-primary font-medium text-on-surface border border-outline-variant/50 cursor-pointer transition-colors ${
               large ? 'px-3.5 py-2 text-xs' : 'px-2 py-0.5 text-[11px]'
             }`}
@@ -195,7 +214,16 @@ export default function ChatPanel({ chat, chips = CHIPS, inputId = 'hero-chat-in
           rows={large || pinned ? 2 : 2}
           maxLength={1000}
           value={draft}
-          onFocus={toBottom}
+          onFocus={(e) => {
+            if (redirect) {
+              // Tapping the box in the page on a phone opens the full-screen chat (with whatever was typed)
+              e.target.blur();
+              openChat(draft);
+              setDraft('');
+            } else {
+              toBottom();
+            }
+          }}
           onChange={(e) => setDraft(e.target.value)}
           onKeyDown={(e) => {
             if (e.key === 'Enter' && !e.shiftKey) submit(e);
@@ -217,7 +245,7 @@ export default function ChatPanel({ chat, chips = CHIPS, inputId = 'hero-chat-in
   if (pinned) {
     return (
       <div className="flex min-h-0 flex-1 flex-col gap-3">
-        <div ref={listRef} aria-live="polite" className="chat-scroll chat-scroll-fade min-h-0 flex-1 space-y-4 overflow-y-auto py-3 pr-1.5 max-h-[420px] lg:max-h-none">
+        <div ref={listRef} aria-live="polite" className={`chat-scroll chat-scroll-fade min-h-0 flex-1 space-y-4 overflow-y-auto py-3 pr-1.5 ${fill ? '' : 'max-h-[420px] lg:max-h-none'}`}>
           {list}
           {thanks}
           {starters}
