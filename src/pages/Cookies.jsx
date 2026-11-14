@@ -254,7 +254,7 @@ export default function Cookies() {
                   <div className="bg-surface-container-low rounded-xl p-5 space-y-2">
                     <span className="font-label-lg text-label-lg font-bold text-on-surface flex items-center gap-2">
                       <span className="material-symbols-outlined text-primary text-[18px]">verified_user</span>Contact</span>
-                    <p className="font-headline-sm text-sm font-bold text-on-surface"><strong>TECH-FIN SOLUTIONS LLC</strong> / <strong>Support and Privacy Team</strong> / <strong><a href="mailto:support@askanythinganswers.com">support@askanythinganswers.com</a></strong></p>
+                    <p className="font-headline-sm text-sm font-bold text-on-surface"><strong>TECH-FIN SOLUTIONS LLC</strong> / <strong>Support and Privacy Team</strong> / <strong><a href="mailto:info@askanythinganswers.com">info@askanythinganswers.com</a></strong></p>
                     <p className="font-body-sm text-xs text-primary font-bold pt-1">Response SLA: &lt; 24 business hours</p>
                   </div>
                   <div className="bg-surface-container-low rounded-xl p-5 space-y-2">
